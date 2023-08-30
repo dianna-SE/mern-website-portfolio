@@ -1,0 +1,600 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+/*   ----- Variables  -----  */
+:root {
+    /* Define 4 or more color variables using Hexadecimal, HSLa, or RGBa (Adobe Color Wheel)*/
+    --textFont: 'Raleway', sans-serif;
+    --headerFont: 'Ubuntu', sans-serif;
+
+    --deepTeal: #3D5257; /* text color */
+    --babyBlue: #A9D3DE; /* background color, light */
+    --skyBlue: #e8f4fc; 
+  
+    --slateBlue: #51658C;
+    --dullSkyBlue: #6D86A6;
+    --aliceBlue: #95ACBF;
+    --oxfordGreen: #082626; /* dark */
+    --riverEdge: #D9D3C7; /* light */
+    --lightEdge: #F5EEE1;  /* form text color */
+    --slateBlueTransparent: rgba(81, 101, 140, .5); /* transparent */
+    --oxfordGreenTransparent: rgba(8, 38, 38, .5); /* transparent */
+
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-attachment: fixed;
+    background-image: url(images/catalina-island-pleasure-pier.jpg); /* background cover photo */
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    margin: 0 4%; /* no top or bottom, margin for left and right */
+    color:var(--babyBlue);
+    letter-spacing: 0.2px;
+    font-family: var(--textFont); /* Define with at least one font name and its related generic family name.*/
+    max-width: 100%; 
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  h2, h3 {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 7px;
+    border-bottom: 4px solid var(--riverEdge);
+
+  }
+  .homepage {
+    padding: 0 5rem;
+  }
+
+  .homepage-logo {
+    padding-right: 2%;
+  }
+
+  .homepage p {
+    padding: 0 1rem;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 2% 0%;
+    padding: 2%;
+    background-color: var(--deepTeal);
+    border: 5px solid var(--slateBlueTransparent);
+  }
+  header img {
+    height: 50px;
+    width: auto;
+    padding-left: 1%;
+  }
+  main {
+    background-color: var(--slateBlueTransparent);
+    line-height: 120%;
+    margin: 0% 2%;
+    padding: 0.5%;
+  }
+  section, .response-container{
+    margin: 0% 2% 2% 2%;
+    padding: 2%;
+    background-color: var(--deepTeal);
+  }
+    article {
+      margin: 0% 4% 5%;
+    }
+      #topic1 {}
+      #topic2 {}
+  footer {
+    margin: 2%;
+    padding: 2%;
+    background-color: var(--deepTeal);
+    border: 5px solid var(--slateBlueTransparent);
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {
+    /* background-color: var(--deepTeal); */
+  }
+  a.active {
+    background-color: var(--riverEdge);
+    color: var(--slateBlue)
+  }
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  /* local nav */
+  nav.local.topics{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--slateBlue);
+    border: 5px solid var(--oxfordGreenTransparent);
+  }
+  nav.local.topics a {
+    color: var(--babyBlue);
+    border-radius: 5%;
+    text-decoration: none;
+  }
+  nav.local.topics a:hover {
+    background-color: var(--slateBlueTransparent);
+    border-top: 1px solid var(--babyBlue);
+    font-weight:bold;
+  }
+
+  /* global nav */
+  nav {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--slateBlueTransparent); */
+    margin: 0% 2%;
+    padding: 0.5%;
+    background-color: var(--slateBlueTransparent);
+
+  }
+  nav a {
+    margin: 1px;
+    padding: 15px 5px;
+    background-color: var(--slateBlue);
+    color: var(--babyBlue);
+    border-radius: 5%;
+    text-decoration: none;
+    border: 3px solid var(--slateBlueTransparent);
+  }
+  nav a:hover {
+    background-color: var(--oxfordGreen);
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {
+    margin-bottom: 5px;
+  }
+  dd {
+    margin-bottom: 10px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headerFont)
+  } 
+  h1 {}
+  h2 {
+    margin-top: 35px;
+  }
+  h3 {
+    font-size: 130%;
+  }
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    background-color: var(--deepTeal);
+    color: var(--babyBlue);
+  }
+  caption {
+    text-align: left;
+    padding: 2% 0%;
+  }
+  thead {
+    text-align: left;
+  }
+  thead tr th {
+    padding: 2% 0%;
+  }
+  tbody {}
+  tfoot {}
+  tr {
+    
+  }
+    tr:nth-child(even) {}
+  tr td:first-child {
+  }
+  tr td:nth-child(2) {
+    display: flex;
+    align-items: center;
+    padding-right: 2%;
+  }
+  tr td:nth-child(3) {
+  }
+  tr td label {
+  }
+
+  th {
+    padding: 1% 0%;
+    border-top: 1px dotted var(--riverEdge);
+    border-bottom: 1px solid var(--riverEdge);
+  }
+  td {
+    padding: 2% 0%;
+    height: 10vh;
+    border-bottom: 1px solid var(--riverEdge);
+  }
+    td:nth-child(1) {}
+  td input {
+  }
+  colgroup {}
+  data {}
+  datalist {}
+  
+  /*  ----- Form ----- */
+  form, button, input, select, textarea {
+    font-family: var(--textFont);
+  }
+  input, textarea, button, select {
+    color: var(--oxfordGreen);
+  }
+  textarea{
+   margin-left: 1%;
+   width: 87%;
+   height: 15%;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  fieldset {
+    border: 2px solid var(--riverEdge);
+    background-color: var(--deepTeal);
+    margin: 2%;
+    margin-top:30px;
+    padding: 2%;
+  }
+  .fieldset-personal {
+    width: 300px;
+  }
+  .fieldset-for-sale {
+    width: 450px;
+  }
+
+    legend {
+      color: var(--babyBlue);
+      font-size: 150%;
+    }
+  .label-questions {
+    margin-top: 8%;
+  }
+  .textarea-delivery {
+    height: 25%;
+    width: 93%;
+  }
+  .submit-order {
+    border-radius: 10px; /* Adjust the value to control the amount of rounding */
+    border: 2px solid var(--riverEdge);
+    padding: 10px 20px;
+    float: right;
+  }
+  label {
+    display: block;
+    margin: 4% 2% 5% 2%;
+  }
+    input, button, textarea, select {
+      font-size: 110%;
+      padding: 0.5%;
+      font-family: inherit;
+    }
+    input {
+      margin-top: 2%;
+    }
+    button, select {
+      background-color: var(--skyBlue);
+    }
+    select {
+      margin: 0% 2%;
+    }
+    option {
+      margin: 0% 2%;
+    }
+    button {
+      border-radius: 10px; /* Adjust the value to control the amount of rounding */
+      border: 2px solid var(--riverEdge);
+      padding: 10px 20px;
+      color: var(--babyBlue);
+      background-color: var(--slateBlue);
+      margin-top: 4%;
+    }
+    input {
+    }
+    .radio-input, .checkbox-input {
+      margin: 1% 0% 3% 5%;
+    }
+    .quantity p{
+      width: 11vh;
+    }
+    .quantity {
+      width: 100%;
+    }
+    :focus {
+      /* background-color: var(--slateBlue); */
+      /* background-color: var(--skyBlue); /* original */
+    }
+    *::placeholder {
+    color: var(--oxfordGreen)
+    }
+    *:required {
+      /* border: 2px solid var(--slateBlue);  original */
+
+    }
+
+    output {
+      margin: 2%;
+      padding: 2%
+    }
+    meter {}
+    progress {}
+    select {}
+      optgroup {}
+      option {}
+    textarea {}
+
+  .mocktail-list th{
+      padding: 5px 10px;
+  }
+
+  .mocktail-list th, td{
+    padding: 5px 10px;
+  }
+
+  .mocktail-table {
+    vertical-align: top;
+  }
+
+  .mocktail-table>td {
+    padding: 1%;
+  }
+  
+  .mocktail-button {
+    color: red;
+  }
+
+  .action-button {
+    text-align: center;
+  }
+
+  .action-button button {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+  .ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align children to the left */
+    justify-content: center; /* Center children vertically */
+    text-align: left;
+    padding: 10px; /* Add padding to the <td> itself */
+    margin-top: -6px;
+    border-top: 1px solid var(--riverEdge);
+    border-bottom: 1px solid transparent;
+  }
+
+
+  .filler {
+    border: none;
+    width: 0%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .edit-mocktail {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5dvh;
+    width: 50vh;
+  }
+
+  .edit-mocktail>input,
+  .edit-mocktail>textarea {
+    display: flex;
+    padding: 2%;
+    width: 100%; 
+    box-sizing: border-box; 
+    border: 2px solid var(--riverEdge);
+  } 
+
+  .edit-mocktail label {
+    text-align: left;
+    display: block;
+    margin-bottom: 2px;
+  
+  }
+
+  .edit-mocktail>textarea {
+    height: 10vh; 
+  }  
+
+
+  .edit-mocktail>input {
+    margin-top: 1px;
+  }  
+
+  .edit-button {
+    margin-bottom: 5%;
+  }
+
+  .date {
+    width: 13vh;
+  }
+
+
+    /* RESPONSE FORM */
+
+    .quantity {
+      display: flex;
+    }
+
+    .quantity-buttons {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .quantity-buttons:hover {
+      cursor: pointer;
+    }
+
+    .response-header{
+      background-color: var(--deepTeal);
+      margin: 0%;
+    } 
+    .answer{
+      margin-left: 2.5%;
+    }
+  
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  /* .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+  } */
+  .gallery-caption {
+    border-bottom: 4px solid var(--riverEdge);
+    font: var(--textFont);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+  }
+  .gallery-header {
+    border-bottom: 0px;
+  }
+
+  /* figure */
+  /* .gallery figure {
+    display: flex;
+    border: 5px solid var(--oxfordGreen);
+    background-color: var(--oxfordGreenTransparent);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 80px 10px;
+    max-width: 300px;
+  }  */
+
+  /* figure caption */
+  /* .gallery figcaption {
+    display: flex;
+    padding: 20px;
+    color: var(--babyBlue);
+    margin: 1%;
+  } */
+  /* .gallery img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  } */
+
+  .image-gallery-svg {
+    color: var(--riverEdge);
+  }
+  
+  /* container that shows all the images to select */
+  .image-gallery-thumbnails-container {
+    display: none;
+  }
+
+  .icon {
+    color: var(--riverEdge);
+    font-size: 110%;
+    transition: background-color 0.8s;
+    padding: 0.3rem;
+    border-radius: 95%;
+  }
+
+  
+
+  .icon:hover {
+    color: var(--oxfordGreen);
+    background-color: var(--riverEdge);
+    border-radius: 95%;
+  }
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
