@@ -1,9 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
 
-// Change the function names and links
-// to fit your portfolio topic.
-
 export const GalleryPage = () => {
 
     const images = [

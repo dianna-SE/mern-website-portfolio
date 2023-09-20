@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-export const EditProjectPageForm = ({ projectToEdit = {} }) => {  // Set default value here
+export const EditProjectPageForm = ({ projectToEdit = {} }) => {  
 
     const [name, setName] = useState(projectToEdit.name || '');
     const [type, setType] = useState(projectToEdit.type || '');
     const [description, setDescription] = useState(projectToEdit.description || '');
     const [link, setLink] = useState(projectToEdit.link || '');
-    const [startDate, setStartDate] = useState(projectToEdit.startDate || ''); // Assuming you meant `startDate`
-    const [endDate, setEndDate] = useState(projectToEdit.endDate || '');       // Likewise for `endDate`
+    const [startDate, setStartDate] = useState(projectToEdit.startDate || ''); 
+    const [endDate, setEndDate] = useState(projectToEdit.endDate || '');      
 
     const redirect = useNavigate();
 
@@ -23,7 +23,6 @@ export const EditProjectPageForm = ({ projectToEdit = {} }) => {  // Set default
             }
         }
 
-        // Correcting the body of the fetch call
         const response = await fetch(`/projects/${projectToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify(projectDetails),

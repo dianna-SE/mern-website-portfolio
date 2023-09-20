@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BiSolidDrink } from 'react-icons/bi';
 import ProjectList from '../components/ProjectList';
 
 function ProjectsPage({ setProject }) {
