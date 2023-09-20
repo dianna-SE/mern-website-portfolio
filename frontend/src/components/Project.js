@@ -1,11 +1,4 @@
 import React, { useState, useRef, useEffect }  from 'react';
-import { MdOutlineDeleteForever } from 'react-icons/md';
-import { AiOutlineEdit, AiOutlinePlusCircle } from 'react-icons/ai';
-
-import profilePic from '../data/profile-pic.jpg';
-import othelloPic from '../data/grid.png';
-import musePic from '../data/muse.png';
-import dogPic from '../data/dog.png';
 
 // THIS SHOWS A PAGE OF EXISTING PROJECT COLLECTIONS
 function Project({ project, onAdd, onDelete, onEdit, renderWithLineBreaks }) {

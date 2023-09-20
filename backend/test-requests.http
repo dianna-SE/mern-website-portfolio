@@ -6,7 +6,9 @@ content-type: application/json
     "name": "Othello",
     "type": "Python PyGame Application",
     "description": "Reinvented Othello with a refreshing take with contemporary tech, engaging users in a new digital experience.",
-    "link": "https://github.com/dianna-SE/othello-pygame"
+    "link": "https://github.com/dianna-SE/othello-pygame",
+    "startDate": "April 2023",
+    "endDate": "May 2023"
 }
 
 
@@ -18,7 +20,9 @@ content-type: application/json
     "name": "HashMap",
     "type": "Data Structure & Algorithms",
     "description": "Tackled collisions through open addressing and separate chaining to deliver an efficient codebase ready for any challenge.",
-    "link": "https://github.com/dianna-SE/osu-cs261-assignment-6"
+    "link": "https://github.com/dianna-SE/osu-cs261-assignment-6",
+    "startDate": "June 2023",
+    "endDate": "Aug 2023"
 }
 
 ### CREATE 3
@@ -29,7 +33,9 @@ content-type: application/json
     "name": "Muse",
     "type": "React Application",
     "description": "Explore, discover, and indulge in a carefully curated selection of 20 handpicked songs.",
-    "link": "https://github.com/dianna-SE/music-app-demo"
+    "link": "https://github.com/dianna-SE/music-app-demo",
+    "startDate": "June 2022",
+    "endDate": "Oct 2022"
 }
 
 ### CREATE 4
@@ -40,7 +46,9 @@ content-type: application/json
     "name": "justPaws",
     "type": "Full Stack Django Application",
     "description": "A space where users connect, share, and engage through a universe of pups, all in a modern web environment.",
-    "link": "https://github.com/dianna-SE/justpaws"
+    "link": "https://github.com/dianna-SE/justpaws",
+    "startDate": "April 2022",
+    "endDate": "May 2022"
 }
 
 ### CREATE 5
@@ -51,7 +59,9 @@ content-type: application/json
     "name": "Milk",
     "type": "React & Redux Application",
     "description": "Infused modern chat mechanics with a dairy-themed delight, enabling users to converse in one single server. Smooth UI meets creamy conversation.",
-    "link": "https://github.com/dianna-SE/milk-project"
+    "link": "https://github.com/dianna-SE/milk-project",
+    "startDate": "Feb 2022",
+    "endDate": "May 2023"
 }
 
 ### RETRIEVE all documents.
@@ -77,7 +87,7 @@ content-type: application/json
 }
 
 ### DELETE by ID (responds with nothing if successful):
-DELETE http://localhost:3000/projects/64d7f6b37ca88f449e1f23a4 HTTP/1.1
+DELETE http://localhost:3000/projects/650b49e94e9e1bc7092d0244 HTTP/1.1
 
 
 

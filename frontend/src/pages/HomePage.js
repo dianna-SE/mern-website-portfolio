@@ -8,16 +8,27 @@ import ProjectList from '../components/ProjectList'
 import { AiOutlineMenu, AiOutlineHome, AiFillGithub, AiFillLinkedin, AiOutlineEdit } from 'react-icons/ai';
 import { MdOutlineDeleteForever } from 'react-icons/md';
 
+function formatDate(dateString) {
+    const monthNames = ["Jan", "Feb", "Mar", "April", "May", "June",
+        "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+    
+        const date = new Date(dateString);
+        const monthIndex = date.getMonth();
+        const year = date.getFullYear();
+    
+        return `${monthNames[monthIndex]} ${year}`;
+}
+
+
 function HomePage() {
 
     const [projects, setProjects] = useState([]);
 
 
     useEffect(() => {
-        // This would typically be an API call to fetch the projects
         const fetchData = async () => {
             try {
-                const response = await fetch('/projects'); // replace with your API endpoint
+                const response = await fetch('/projects'); 
                 const data = await response.json();
                 setProjects(data);
             } catch (error) {
@@ -134,11 +145,70 @@ function HomePage() {
                     <p>{project.description}</p>       
                     <div className='dot-container'>
                         <div class="tiny-dot"></div>
-                        <button>May 23, 2019</button>
+                        <button>{formatDate(project.startDate)} - {formatDate(project.endDate)}</button>
                     </div>
                 </div>
                 ))}
             </div>
+
+            
+
+
+            
+
+
+                {/* <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
+                    <h5 class="bubble">Othello</h5>
+                    <h3>Python PyGame Application</h3>
+                    <p>Reinvented Othello with a refreshing take with contemporary tech, engaging users in a new digital experience.</p>       
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>April 2023 - May 2023</button>
+                    </div>
+                </div>
+
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/osu-cs261-assignment-6', '_blank')}>
+                    <h5 class="bubble">HashMap</h5>
+                    <h3>Data Structure & Algorithms</h3>
+                    <p>Tackled collisions through open addressing and separate chaining to deliver an efficient codebase ready for any challenge.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>June 2023 - Aug 2023</button>
+                    </div>
+                </div>
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/music-app-demo', '_blank')}>
+                    <h5 class="bubble">Muse</h5>
+                    <h3>React Application</h3>
+                    <p>Explore, discover, and indulge in a carefully curated selection of 20 handpicked songs.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>June 2022 - Oct 2022</button>
+                    </div>
+                </div>
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/justpaws', '_blank')}>
+                    <h5 class="bubble">justPaws</h5>
+                    <h3>Full Stack Django Application</h3>
+                    <p>A space where users connect, share, and engage through a universe of pups, all in a modern web environment.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>April 2022 - May 2022</button>
+                    </div>
+                </div>
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/milk-project', '_blank')}>
+                    <h5 class="bubble">Milk</h5>
+                    <h3>React & Redux Application</h3>
+                    <p>Infused modern chat mechanics with a dairy-themed delight, enabling users to converse in one single server. Smooth UI meets creamy conversation.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>Feb 2022 - Mar 2023</button>
+                    </div>
+                </div> */}
+ 
+        
         </article>
     </>
   );

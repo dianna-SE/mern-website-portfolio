@@ -26,6 +26,9 @@ const projectSchema = mongoose.Schema({
     type: [{ type: String, required: true }],
     description: [{ type: String, required: true }],
     link: { type: String, required: true }, 
+    startDate:   { type: Date, required: false },  // set required to true if you always want a start date
+    endDate:     { type: Date, required: false },  // set required to true if you always want an end date
+    
 });
 
 // Compile the model from the schema 
@@ -34,12 +37,14 @@ const projects = mongoose.model('Project', projectSchema);
 
 
 // CREATE model *****************************************
-const createProject = async (name, type, description, link) => {
+const createProject = async (name, type, description, link, startDate, endDate) => {
     const project = new projects({ 
         name: name,
         type: type,
         description: description,
-        link: link
+        link: link,
+        startDate: startDate,
+        endDate: endDate
     });
     return project.save();
 }
@@ -72,12 +77,16 @@ const updateProject = async (_id, name, type, description, link) => {
         type: type,
         description: description,
         link: link,
+        startDate: startDate,
+        endDate: endDate
     });
     return { 
         name: name,
         type: type,
         description: description,
         link: link,
+        startDate: startDate,
+        endDate: endDate
     }
 }
 

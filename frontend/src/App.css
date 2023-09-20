@@ -796,15 +796,15 @@ body.div-in-view {
     margin: 0;
   }
 
-  .edit-mocktail {
+  .edit-project {
     display: flex;
     flex-direction: column;
     padding: 0 5dvh;
     width: 50vh;
   }
 
-  .edit-mocktail>input,
-  .edit-mocktail>textarea {
+  .edit-project>input,
+  .edit-project>textarea {
     display: flex;
     padding: 2%;
     width: 100%; 
@@ -812,24 +812,31 @@ body.div-in-view {
     border: 2px solid var(--riverEdge);
   } 
 
-  .edit-mocktail label {
+  .edit-project label {
     text-align: left;
     display: block;
     margin-bottom: 2px;
   
   }
 
-  .edit-mocktail>textarea {
+  .edit-project>textarea {
     height: 10vh; 
   }  
 
 
-  .edit-mocktail>input {
+  .edit-project>input {
     margin-top: 1px;
   }  
 
   .edit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 5%;
+    background-color: rgb(238, 238, 238);
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .date {

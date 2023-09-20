@@ -16,7 +16,9 @@ app.post ('/projects', (req,res) => {
         req.body.name,
         req.body.type,
         req.body.description,
-        req.body.link
+        req.body.link,
+        req.body.startDate,
+        req.body.endDate
         )
         .then(project => {
             res.status(201).json(project);
@@ -70,7 +72,9 @@ app.put('/projects/:_id', (req, res) => {
         req.body.name,
         req.body.type,
         req.body.description,
-        req.body.link
+        req.body.link,
+        req.body.startDate,
+        req.body.endDate
     )
     .then(project => {
         res.json(project);

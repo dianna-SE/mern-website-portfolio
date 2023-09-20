@@ -14,8 +14,8 @@ import GalleryPage from './pages/GalleryPage.js';
 import OrderPage from './pages/OrderPage.js';
 import ContactPage from './pages/ContactPage.js';
 import ProjectsPage from './pages/ProjectsPage';
-import AddMocktailPageForm from './pages/AddMocktailPageForm';
-import EditMocktailPageForm from './pages/EditMocktailPageForm';
+import AddProjectPageForm from './pages/AddProjectPageForm';
+import EditMocktailPageForm from './pages/EditProjectPageForm';
 
 
 // Define the function that renders the content in Routes, using State.
@@ -35,7 +35,7 @@ function App() {
                 <Routes> 
 
                     <Route path="/mocktails" element={<ProjectsPage setMocktail={setMocktailToEdit}/>} />
-                    <Route path="/create" element={<AddMocktailPageForm />} /> 
+                    <Route path="/create" element={<AddProjectPageForm />} /> 
                     <Route path="/update" element={<EditMocktailPageForm mocktailToEdit={mocktail} />} />
                     {/* <Route path="/" element={<HomePage/>} /> */}
                     <Route path="/" element={<HomePage/>} />
