@@ -1,7 +1,5 @@
 import React from 'react';
 import Mocktail from './Mocktail';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
-import { BiMessageSquareAdd } from 'react-icons/bi';
 
 function renderWithLineBreaks(inputText) {
     const textLines = Array.isArray(inputText) ? inputText : inputText.split('\n');
@@ -17,19 +15,6 @@ function MocktailList({ mocktail, mocktails, onAdd, onDelete, onEdit }) {
     return (
         
         <table id="mocktails">
-            <caption>Add, edit, or delete projects from the current list.</caption>
-            <thead>
-                <tr class="mocktail-list">
-                    <th>Name</th>
-                    <th></th>
-                    <th>Description</th>
-                    <th>Technologies</th>
-                    <th>Date</th>
-                    <th>Update</th>
-                    <th>Delete</th>
-                    <th class="add"><button onClick={() => onAdd(mocktail)}><BiMessageSquareAdd class="icon"/></button></th>
-                </tr>
-            </thead>
             <tbody>
                 {mocktails.map((mocktail, i) => (
                     <Mocktail 

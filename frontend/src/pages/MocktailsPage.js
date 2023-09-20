@@ -50,7 +50,7 @@ function MocktailsPage({ setMocktail }) {
     // DISPLAY the mocktails
     return (
         <>
-            <h2>Projects</h2>
+            {/* <h2>Projects</h2> */}
             <MocktailList 
                 mocktails={mocktails} 
                 onAdd={onAddMocktail}

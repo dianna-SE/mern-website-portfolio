@@ -61,8 +61,6 @@ export const EditMocktailPageForm = ({ mocktailToEdit }) => {
     return (
         <>
         <article>
-            <h2><BiSolidDrink /> Edit a mocktail</h2>
-            <p>Modify the details below to update this mocktail. Once you've made the changes, click 'Save and update' to apply them.</p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 
                 <fieldset class="edit-mocktail">
@@ -71,7 +69,6 @@ export const EditMocktailPageForm = ({ mocktailToEdit }) => {
                     <label for="drink">Name</label>
                     <input
                         type="text"
-                        placeholder="Name"
                         value={drink}
                         onChange={e => setDrink(e.target.value)} 
                         id="drink" 
@@ -81,7 +78,6 @@ export const EditMocktailPageForm = ({ mocktailToEdit }) => {
                     <label for="instructions">Description</label>
                     <textarea
                         type="text"
-                        placeholder="(e.g., Add the lemon juice.)"
                         value={instructions}
                         onChange={e => setInstructions(e.target.value)} 
                         id="instructions" 
@@ -90,19 +86,17 @@ export const EditMocktailPageForm = ({ mocktailToEdit }) => {
                     <label for="ingredients">Technologies</label>
                     <textarea
                         value={ingredients}
-                        placeholder="Update the ingredients for this drink. (e.g., '1 cup sugar')"
                         onChange={e => setIngredients(e.target.value.split('\n'))}
                         id="ingredients" 
                         required />
 
-                    <label for="date">Current Date</label>
+                    <label for="ingredients">Website</label>
                     <input
-                        type="date"
-                        placeholder="Date the mocktail was created"
-                        value={date}
-                        onChange={e => setDate(e.target.value)} 
-                        id="date" />
-
+                        type="text"
+                        value={drink}
+                        onChange={e => setDrink(e.target.value)} 
+                        id="drink" 
+                        required />
 
                     <label for="submit">
                     <button
