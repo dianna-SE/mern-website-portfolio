@@ -6,9 +6,9 @@ The projects you see below the introduction are fetched from MongoDB, demonstrat
 
 Post-course, I deployed the site using AWS Amplify, highlighting my ability to take a project from development to live production. Throughout the process, I've used Git and GitHub for version control, ensuring that every step of my development is well-documented and organized.
 
-![Portfolio Screenshot](path-to-screenshot.png)
+![Screenshot](./frontend/images/screenshot.png)
 
----
+---asfasdfasdfsdf
 
 ## Features
 - **Clean Design**: Utilizes a minimalist and intuitive interface ensuring that users can easily navigate and understand the content without being overwhelmed. This simplicity emphasizes the projects and achievements, making the portfolio more effective and user-friendly.
