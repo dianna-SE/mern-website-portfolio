@@ -8,6 +8,9 @@ Post-course, I deployed the site using AWS Amplify, highlighting my ability to t
 
 ![Screenshot of My Portfolio](<img width="1328" alt="screenshot" src="https://github.com/dianna-SE/mern-website-portfolio/assets/97206862/bcf670f6-1122-4a84-8a30-7f0920d21902">
 )
+<img width="1328" alt="screenshot" src="https://github.com/dianna-SE/mern-website-portfolio/assets/97206862/1ccb9f09-2bc5-462e-b9b0-2b3bdd8f81f8">
+
+
 
 ---
 
