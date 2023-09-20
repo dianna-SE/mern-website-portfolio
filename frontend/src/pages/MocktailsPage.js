@@ -50,8 +50,7 @@ function MocktailsPage({ setMocktail }) {
     // DISPLAY the mocktails
     return (
         <>
-            <h2><BiSolidDrink />Mocktail Collection</h2>
-            <p>You can add, edit, or delete mocktails from the current collection.</p>
+            <h2>Projects</h2>
             <MocktailList 
                 mocktails={mocktails} 
                 onAdd={onAddMocktail}

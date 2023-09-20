@@ -17,20 +17,15 @@ function MocktailList({ mocktail, mocktails, onAdd, onDelete, onEdit }) {
     return (
         
         <table id="mocktails">
-            <caption>Collection of mocktail drinks.</caption>
+            <caption>You can add, edit, or delete projects from the current collection.</caption>
             <thead>
                 <tr class="mocktail-list">
-                    <th>Drink</th>
+                    <th>Name</th>
                     <th></th>
-                    <th>Ingredients</th>
-                    <th>Instructions</th>
-                    <th>Servings</th>
-                    <th>Preparation Time</th>
+                    <th>Stack</th>
+                    <th>Description</th>
                     <th>Date</th>
-                    {/* <th>Add </th> */}
-                    <th>Edit</th>
-                    <th>Delete</th>
-                    <th class="action-button"><button onClick={() => onAdd(mocktail)}><BiMessageSquareAdd class="icon"/></button></th>
+                    <th class="add"><button onClick={() => onAdd(mocktail)}><BiMessageSquareAdd class="icon"/></button></th>
                 </tr>
             </thead>
             <tbody>

@@ -66,9 +66,9 @@ export const EditMocktailPageForm = ({ mocktailToEdit }) => {
             <form onSubmit={(e) => { e.preventDefault();}}>
                 
                 <fieldset class="edit-mocktail">
-                    <legend>Update a mocktail</legend>
+                    <legend>Update project</legend>
 
-                    <label for="drink">Mocktail</label>
+                    <label for="drink">Name</label>
                     <input
                         type="text"
                         placeholder="Name"
@@ -78,17 +78,7 @@ export const EditMocktailPageForm = ({ mocktailToEdit }) => {
                         required />
 
 
-                    <label for="ingredients">Ingredients</label>
-                    <textarea
-                        value={ingredients}
-                        placeholder="Update the ingredients for this drink. (e.g., '1 cup sugar')"
-                        onChange={e => setIngredients(e.target.value.split('\n'))}
-                        id="ingredients" 
-                        required />
-
-
-
-                    <label for="instructions">Instructions</label>
+                    <label for="instructions">Description</label>
                     <textarea
                         type="text"
                         placeholder="(e.g., Add the lemon juice.)"
@@ -97,26 +87,12 @@ export const EditMocktailPageForm = ({ mocktailToEdit }) => {
                         id="instructions" 
                         required />
 
-                    <label for="servings">Servings</label>
-                    <input
-                        type="number"
-                        placeholder="(per drink)"
-                        value={servings}
-                        onChange={e => setServings(e.target.value)} 
-                        min="1"
-                        max="99"
-                        id="servings" 
-                        required />
-
-                    <label for="preparationTime">Preparation Time</label>
-                    <input
-                        type="text"
-                        placeholder="(eg., 60mins)"
-                        value={preparationTime}
-                        onChange={e => setPreparationTime(e.target.value)} 
-                        min="1"
-                        max="99"
-                        id="preparationTime" 
+                    <label for="ingredients">Technologies</label>
+                    <textarea
+                        value={ingredients}
+                        placeholder="Update the ingredients for this drink. (e.g., '1 cup sugar')"
+                        onChange={e => setIngredients(e.target.value.split('\n'))}
+                        id="ingredients" 
                         required />
 
                     <label for="date">Current Date</label>

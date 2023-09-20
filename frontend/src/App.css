@@ -748,6 +748,20 @@ body.div-in-view {
     color: red;
   }
 
+  .add {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .add button {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
   .action-button {
     text-align: center;
   }
@@ -759,6 +773,7 @@ body.div-in-view {
     border: none;
     background: none;
     cursor: pointer;
+    font-size: 3rem;
 }
   .ingredients {
     display: flex;
