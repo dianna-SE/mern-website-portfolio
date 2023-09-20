@@ -111,7 +111,7 @@ function Mocktail({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
 
                 <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
                     <h5 class="bubble">{mocktail.drink}</h5>
-                    <h3>{mocktail.drink}awef</h3>
+                    <h3>{mocktail.drink}</h3> 
                     <p>{mocktail.instructions}</p>       
                     <div class='dot-container'>
                         <div class="tiny-dot"></div>

@@ -1,8 +1,8 @@
-// Controllers for the mocktail Collection
+// Controllers for the project Collection
 
 import 'dotenv/config';
 import express from 'express';
-import * as mocktails from './mocktails-model.mjs';
+import * as projects from './projects-model.mjs';
 
 const PORT = process.env.PORT;
 const app = express();
@@ -10,18 +10,16 @@ app.use(express.json());  // REST needs JSON MIME type.
 
 
 // CREATE controller ******************************************
-app.post ('/mocktails', (req,res) => { 
+app.post ('/projects', (req,res) => { 
     console.log('Request Body:', req.body); //TEST
-    mocktails.createMocktail(
-        req.body.drink, 
-        req.body.ingredients,
-        req.body.instructions,
-        req.body.servings,
-        req.body.preparationTime,
-        req.body.date
+    projects.createProject(
+        req.body.name,
+        req.body.type,
+        req.body.description,
+        req.body.link
         )
-        .then(mocktail => {
-            res.status(201).json(mocktail);
+        .then(project => {
+            res.status(201).json(project);
         })
         .catch(error => {
             console.log(error);
@@ -31,11 +29,11 @@ app.post ('/mocktails', (req,res) => {
 
 
 // RETRIEVE controller ****************************************************
-app.get('/mocktails', (req, res) => {
-    mocktails.retrieveMocktails()
-        .then(mocktail => { 
-            if (mocktail !== null) {
-                res.json(mocktail);
+app.get('/projects', (req, res) => {
+    projects.retrieveProjects()
+        .then(project => { 
+            if (project !== null) {
+                res.json(project);
             } else {
                 res.status(404).json({ Error: 'Status 404 error -- Failed to retrieve the item due to the requested page not found in the server.' });
             }         
@@ -48,11 +46,11 @@ app.get('/mocktails', (req, res) => {
 
 
 // RETRIEVE by ID controller
-app.get('/mocktails/:_id', (req, res) => {
-    mocktails.retrieveMocktailByID(req.params._id)
-    .then(mocktail => { 
-        if (mocktail !== null) {
-            res.json(mocktail);
+app.get('/projects/:_id', (req, res) => {
+    projects.retrieveProjectByID(req.params._id)
+    .then(project => { 
+        if (project !== null) {
+            res.json(project);
         } else {
             res.status(404).json({ Error: 'Status 404 error -- Failed to retrieve the item by the ID due to the requested page not found in the server.' });
         }         
@@ -66,18 +64,16 @@ app.get('/mocktails/:_id', (req, res) => {
 
 
 // UPDATE controller ************************************
-app.put('/mocktails/:_id', (req, res) => {
-    mocktails.updateMocktail(
+app.put('/projects/:_id', (req, res) => {
+    projects.updateProject(
         req.params._id, 
-        req.body.drink, 
-        req.body.ingredients,
-        req.body.instructions,
-        req.body.servings,
-        req.body.preparationTime,
-        req.body.date
+        req.body.name,
+        req.body.type,
+        req.body.description,
+        req.body.link
     )
-    .then(mocktail => {
-        res.json(mocktail);
+    .then(project => {
+        res.json(project);
     })
     .catch(error => {
         console.log(error);
@@ -87,8 +83,8 @@ app.put('/mocktails/:_id', (req, res) => {
 
 
 // DELETE Controller ******************************
-app.delete('/mocktails/:_id', (req, res) => {
-    mocktails.deleteMocktailById(req.params._id)
+app.delete('/projects/:_id', (req, res) => {
+    projects.deleteProjectById(req.params._id)
         .then(deletedCount => {
             if (deletedCount === 1) {
                 res.status(200).send({ Success: 'The request to delete the item was successful!' });
