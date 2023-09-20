@@ -1,167 +1,86 @@
 ### CREATE five documents.
-POST http://localhost:3000/mocktails HTTP/1.1
+POST http://localhost:3000/projects HTTP/1.1
 content-type: application/json
 
 {
-    "drink": "Mint Mojito Mocktail",
-    "ingredients": [
-        "8 Fresh Mint Leaves",
-        "1 Lime",
-        "1 ounce Simple Syrup",
-        "6 ounces Club Soda",
-        "1 cup Ice"
-    ],
-    "instructions": [
-        "Slice the lime into wedges and place them in a glass.",
-        "Add the simple syrup to the glass and muddle the lime and syrup together.",
-        "Add the mint leaves to the glass and gently muddle for a minty aroma.",
-        "Fill the glass with ice, then pour in the club soda.",
-        "Combine the ingredients and top it off with fresh mint or dried mint leaves.",
-        "Enjoy this Mint Mojito Mocktail!"
-    ],
-    "servings": 1,
-    "preparationTime": "10 minutes",
-    "date": "2023-08-07"
+    "name": "Othello",
+    "type": "Python PyGame Application",
+    "description": "Reinvented Othello with a refreshing take with contemporary tech, engaging users in a new digital experience.",
+    "link": "https://github.com/dianna-SE/othello-pygame"
 }
 
 
 ### CREATE 2
-POST http://localhost:3000/mocktails HTTP/1.1
+POST http://localhost:3000/projects HTTP/1.1
 content-type: application/json
 
 {
-    "drink": "Margarita Mocktail",
-    "ingredients": [
-        "2 ounces Lime Juice",
-        "1 ounce Orange Juice",
-        "0.5 ounce Agave Nectar",
-        "3 ounces Club Soda",
-        "1 cup Ice",
-        "1 teaspoon Salt"
-    ],
-    "instructions": [
-        "Rim the edge of a glass with salt, if desired, then fill the glass with ice.",
-        "In a shaker, combine the lime juice, orange juice, and agave nectar.",
-        "Shake well to mix the ingredients, then strain the mixture into the glass over the ice.",
-        "Top off the glass with club soda and garnish with a lime wedge or orange slice.",
-        "Enjoy this refreshing Margarita Mocktail!"
-    ],
-    "servings": 1,
-    "preparationTime": "5 minutes",
-    "date": "2023-08-07"
+    "name": "HashMap",
+    "type": "Data Structure & Algorithms",
+    "description": "Tackled collisions through open addressing and separate chaining to deliver an efficient codebase ready for any challenge.",
+    "link": "https://github.com/dianna-SE/osu-cs261-assignment-6"
 }
 
 ### CREATE 3
-POST http://localhost:3000/mocktails HTTP/1.1
+POST http://localhost:3000/projects HTTP/1.1
 content-type: application/json
 
 {
-    "drink": "Raspberry Lemonade Mocktail",
-    "ingredients": [
-        "0.5 cup Raspberries",
-        "0.25 cup Lemon Juice",
-        "2 tablespoons Simple Syrup",
-        "0.75 cup Club Soda",
-        "1 cup Ice",
-        "1 slice Lemon Slice"
-    ],
-    "instructions": [
-        "In a glass, muddle the raspberries so they are of soft, broken down texture.",
-        "Add the lemon juice and simple syrup to the glass, then fill the glass with ice.",
-        "Top off the glass with club soda and garnish with a lemon slice.",
-        "Enjoy this refreshing Raspberry Lemonade Mocktail!"
-    ],
-    "servings": 1,
-    "preparationTime": "5 minutes",
-    "date": "2023-08-07"
+    "name": "Muse",
+    "type": "React Application",
+    "description": "Explore, discover, and indulge in a carefully curated selection of 20 handpicked songs.",
+    "link": "https://github.com/dianna-SE/music-app-demo"
 }
 
 ### CREATE 4
-POST http://localhost:3000/mocktails HTTP/1.1
+POST http://localhost:3000/projects HTTP/1.1
 content-type: application/json
 
 {
-    "drink": "Virgin Mimosa",
-    "ingredients": [
-        "0.5 cup Orange Juice",
-        "0.5 cup Sparkling Water",
-        "1 slice Orange Slice"
-    ],
-    "instructions": [
-        "In a champagne flute, pour the orange juice.",
-        "Top off the glass with sparkling water and garnish with an orange slice.",
-        "Enjoy this refreshing Virgin Mimosa!"
-    ],
-    "servings": 1,
-    "preparationTime": "5 minutes",
-    "date": "2023-08-07"
+    "name": "justPaws",
+    "type": "Full Stack Django Application",
+    "description": "A space where users connect, share, and engage through a universe of pups, all in a modern web environment.",
+    "link": "https://github.com/dianna-SE/justpaws"
 }
 
 ### CREATE 5
-POST http://localhost:3000/mocktails HTTP/1.1
+POST http://localhost:3000/projects HTTP/1.1
 content-type: application/json
 
 {
-    "drink": "Virgin Piña Colada",
-    "ingredients": [
-        "0.5 cup Pineapple Juice",
-        "0.25 cup Coconut Cream",
-        "1 cup Crushed Ice",
-        "1 slice Pineapple Slice",
-        "1 Maraschino Cherry"
-    ],
-    "instructions": [
-        "In a blender, combine the pineapple juice, coconut cream, and crushed ice.",
-        "Blend until smooth and creamy, then pour the mixture into a glass.",
-        "Top it off with a pineapple slice and a maraschino cherry.",
-        "Enjoy this refreshing Virgin Piña Colada!"
-    ],
-    "servings": 1,
-    "preparationTime": "5 minutes",
-    "date": "2023-08-07"
+    "name": "Milk",
+    "type": "React & Redux Application",
+    "description": "Infused modern chat mechanics with a dairy-themed delight, enabling users to converse in one single server. Smooth UI meets creamy conversation.",
+    "link": "https://github.com/dianna-SE/milk-project"
 }
 
 ### RETRIEVE all documents.
-GET http://localhost:3000/mocktails HTTP/1.1
+GET http://localhost:3000/projects HTTP/1.1
 
 
 ### RETRIEVE a document by its ID.
 ### Replace the following ID with one that exists in the collection.
-GET http://localhost:3000/mocktails/64d30cafc2299216fe510d66 HTTP/1.1
+GET http://localhost:3000/projects/64d30cafc2299216fe510d66 HTTP/1.1
 
 
 ### UPDATE one document's year, by ID.
 ### Replace the ID in the following request with one that exists
 ### and update the year:
-PUT http://localhost:3000/mocktails/64d72ff69cc940a521de87ab HTTP/1.1
+PUT http://localhost:3000/projects/64d72ff69cc940a521de87ab HTTP/1.1
 content-type: application/json
 
 {
-    "drink": "Strawberry Mint Mojito Mocktail",
-    "ingredients": [
-        "4 pieces Fresh Strawberries",
-        "8 Fresh Mint Leaves",
-        "1 Lime",
-        "1 ounce Simple Syrup",
-        "6 ounces Club Soda",
-        "1 cup Ice"
-    ],
-    "instructions": [
-        "Cut the strawberries into halves or slices.",
-        "Slice the lime into wedges and place them in a glass.",
-        "Add the simple syrup to the glass and muddle the lime and syrup together.",
-        "Add the mint leaves to the glass and gently muddle for a minty aroma.",
-        "Fill the glass with ice, then pour in the club soda.",
-        "Combine the ingredients and top it off with fresh mint or dried mint leaves.",
-        "Enjoy this Strawverry Mint Mojito Mocktail!"
-    ]
+    "name": "Test",
+    "type": "Application",
+    "description": "Just a test to see if PUT operation works correctly.",
+    "link": "https://www.google.com/"
 }
 
 ### DELETE by ID (responds with nothing if successful):
-DELETE http://localhost:3000/mocktails/64d7f6b37ca88f449e1f23a4 HTTP/1.1
+DELETE http://localhost:3000/projects/64d7f6b37ca88f449e1f23a4 HTTP/1.1
 
 
 
 ### RETRIEVE all documents (responds with 4 or the original 5):
-GET http://localhost:3000/mocktails HTTP/1.1
+GET http://localhost:3000/projects HTTP/1.1
 

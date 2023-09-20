@@ -3,12 +3,30 @@ import profilePic from '../data/profile-pic.jpg';
 import othelloPic from '../data/grid.png';
 import musePic from '../data/muse.png';
 import dogPic from '../data/dog.png';
-import Mocktail from '../components/Mocktail'
-import MocktailList from '../components/MocktailList'
+import Project from '../components/Project'
+import ProjectList from '../components/ProjectList'
 import { AiOutlineMenu, AiOutlineHome, AiFillGithub, AiFillLinkedin, AiOutlineEdit } from 'react-icons/ai';
 import { MdOutlineDeleteForever } from 'react-icons/md';
 
 function HomePage() {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        // This would typically be an API call to fetch the projects
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/api/projects'); // replace with your API endpoint
+                const data = await response.json();
+                setProjects(data);
+            } catch (error) {
+                console.error("Failed to fetch projects:", error);
+            }
+        }
+
+        fetchData();
+    }, []);
+
+    console.log(projects)
 
     const colorTransitionRef = useRef(null);
 
@@ -109,15 +127,28 @@ function HomePage() {
 
             <div class="home-works">
 
-                {/* <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
-                    <h5 class="bubble">{mocktail.drink}</h5>
-                    <h3>{mocktail.drink}</h3>
-                    <p>{mocktail.instructions}</p>       
+                {/* <div class="project-details" onClick={() => window.open(project.link, '_blank')}>
+                    <h5 class="bubble">{project.name}</h5>
+                    <h3>{project.type}</h3>
+                    <p>{project.description}</p>       
                     <div class='dot-container'>
                         <div class="tiny-dot"></div>
-                        <button>{date}</button>
+                        <button>{project.link}</button>
                     </div>
                 </div> */}
+
+                {projects.map((project) => (
+                <div class="project-details" onClick={() => window.open(project.link, '_blank')}>
+                    <h5 class="bubble">{project.name}</h5>
+                    <h3>{project.type}</h3>
+                    <p>{project.description}</p>
+                    
+                    <div class='dot-container'>
+                    <div class="tiny-dot"></div>
+                        <button>{project.date}</button> {/* Assuming you might want to show date or some other detail here */}
+                </div>
+        </div>
+    ))}
 
                 <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
                     <h5 class="bubble">Othello</h5>

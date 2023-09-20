@@ -7,9 +7,8 @@ import othelloPic from '../data/grid.png';
 import musePic from '../data/muse.png';
 import dogPic from '../data/dog.png';
 
-// THIS SHOWS A PAGE OF EXISTING MOCKTAIL COLLECTIONS
-function Mocktail({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
-    const date = useState(mocktail.date.slice(0, 10));
+// THIS SHOWS A PAGE OF EXISTING PROJECT COLLECTIONS
+function Project({ project, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
 
     const colorTransitionRef = useRef(null);
 
@@ -69,9 +68,6 @@ function Mocktail({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
                 Resume
                 </a>
             </button>
-            {/* <a class="github-button" href="https://github.com/dianna-SE" target="_blank" rel="noopener noreferrer">
-                <AiFillGithub/>
-            </a> */}
         </div>
 
         
@@ -109,13 +105,13 @@ function Mocktail({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
 
             <div class="home-works">
 
-                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
-                    <h5 class="bubble">{mocktail.drink}</h5>
-                    <h3>{mocktail.drink}</h3> 
-                    <p>{mocktail.instructions}</p>       
+                <div class="project-details" onClick={() => window.open('{project.link}', '_blank')}>
+                    <h5 class="bubble">{project.name}</h5>
+                    <h3>{project.type}</h3> 
+                    <p>{project.description}</p>       
                     <div class='dot-container'>
                         <div class="tiny-dot"></div>
-                        <button>{date}</button>
+                        <button>test</button>
                     </div>
                 </div>
 
@@ -175,19 +171,19 @@ function Mocktail({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
         
         </article>
         
-        {/* <tr class="mocktail-table">
-            <td>{mocktail.drink}</td>
+        {/* <tr class="project-table">
+            <td>{project.drink}</td>
             <td class="filler"></td>
-            <td>{renderWithLineBreaks(mocktail.ingredients)}</td>
-            <td>{renderWithLineBreaks(mocktail.instructions)}</td>
-            <td>{mocktail.servings}</td>
-            <td>{mocktail.preparationTime}</td>
+            <td>{renderWithLineBreaks(project.ingredients)}</td>
+            <td>{renderWithLineBreaks(project.instructions)}</td>
+            <td>{project.servings}</td>
+            <td>{project.preparationTime}</td>
             <td class="date">{date}</td>
 
-            <td class="action-button"><button onClick={() => onEdit(mocktail)}><AiOutlineEdit class="icon"/></button></td>
-            <td class="action-button"><button onClick={() => onDelete(mocktail._id)}><MdOutlineDeleteForever class="icon"/></button></td>
+            <td class="action-button"><button onClick={() => onEdit(project)}><AiOutlineEdit class="icon"/></button></td>
+            <td class="action-button"><button onClick={() => onDelete(project._id)}><MdOutlineDeleteForever class="icon"/></button></td>
         </tr> */}
         </>
     );
 }
-export default Mocktail;
+export default Project;

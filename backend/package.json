@@ -2,10 +2,10 @@
   "name": "mocktails-starter-backend",
   "version": "2023",
   "description": "Assignment 8 - Backend using MongoDB",
-  "main": "mocktails-controller.mjs",
+  "main": "projects-controller.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon mocktails-controller.mjs"
+    "start": "nodemon projects-controller.mjs"
   },
   "author": "Dianna Pham",
   "license": "ISC",

@@ -1,5 +1,5 @@
 import React from 'react';
-import Mocktail from './Mocktail';
+import Project from './Project';
 
 function renderWithLineBreaks(inputText) {
     const textLines = Array.isArray(inputText) ? inputText : inputText.split('\n');
@@ -11,15 +11,16 @@ function renderWithLineBreaks(inputText) {
     ));
 }
 
-function MocktailList({ mocktail, mocktails, onAdd, onDelete, onEdit }) {
+function ProjectList({ project, projects, onAdd, onDelete, onEdit }) {
     return (
+        <>
         
-        <table id="mocktails">
+        <table id="projects">
             <tbody>
-                {mocktails.map((mocktail, i) => (
-                    <Mocktail 
-                        key={mocktail._id || i}
-                        mocktail={mocktail}
+                {projects.map((project, i) => (
+                    <Project 
+                        key={project._id || i}
+                        project={project}
                         // onAdd={onAdd}
                         onDelete={onDelete}
                         onEdit={onEdit}
@@ -28,9 +29,10 @@ function MocktailList({ mocktail, mocktails, onAdd, onDelete, onEdit }) {
                 ))}
             </tbody>
         </table>
+    </>
     );
 }
 
-export default MocktailList;
+export default ProjectList;
 
 

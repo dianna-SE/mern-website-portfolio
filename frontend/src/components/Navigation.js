@@ -25,7 +25,7 @@ function Navigation() {
 
         <div class="center-group">
           <NavLink to="../gallery" activeClassName="active" className="nav-link"><AiFillPicture/></NavLink>
-          <NavLink to="../mocktails" activeClassName="active" className="nav-link"><AiFillLayout/></NavLink>
+          <NavLink to="../projects" activeClassName="active" className="nav-link"><AiFillLayout/></NavLink>
           {/* <NavLink to="/" activeClassName="active" className="nav-link" onClick={() => window.open('https://github.com/dianna-SE', '_blank')} ><AiFillGithub/></NavLink>
           <NavLink to="/" activeClassName="active" className="nav-link" onClick={() => window.open('https://www.linkedin.com/in/diannapham-se/', '_blank')}><AiFillLinkedin/></NavLink> */}
         </div>

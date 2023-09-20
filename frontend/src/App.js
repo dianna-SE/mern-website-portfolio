@@ -13,7 +13,7 @@ import TopicsPage from './pages/TopicsPage.js';
 import GalleryPage from './pages/GalleryPage.js';
 import OrderPage from './pages/OrderPage.js';
 import ContactPage from './pages/ContactPage.js';
-import MocktailsPage from './pages/MocktailsPage';
+import ProjectsPage from './pages/ProjectsPage';
 import AddMocktailPageForm from './pages/AddMocktailPageForm';
 import EditMocktailPageForm from './pages/EditMocktailPageForm';
 
@@ -34,13 +34,13 @@ function App() {
 
                 <Routes> 
 
-                    <Route path="/mocktails" element={<MocktailsPage setMocktail={setMocktailToEdit}/>} />
+                    <Route path="/mocktails" element={<ProjectsPage setMocktail={setMocktailToEdit}/>} />
                     <Route path="/create" element={<AddMocktailPageForm />} /> 
                     <Route path="/update" element={<EditMocktailPageForm mocktailToEdit={mocktail} />} />
                     {/* <Route path="/" element={<HomePage/>} /> */}
                     <Route path="/" element={<HomePage/>} />
                     <Route path="/topics" element={<TopicsPage/>} />
-                    <Route path="/mocktails" element={<MocktailsPage/>} />
+                    <Route path="/projects" element={<ProjectsPage/>} />
                     <Route path="/gallery" element={<GalleryPage/>} />
                     <Route path="/order" element={<OrderPage/>} />
                     <Route path="/contact" element={<ContactPage/>} /> 

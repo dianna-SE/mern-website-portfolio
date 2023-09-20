@@ -29,8 +29,8 @@ const projectSchema = mongoose.Schema({
 });
 
 // Compile the model from the schema 
-// by defining the collection name "mocktails".
-const projects = mongoose.model('Project', ProjectSchema);
+// by defining the collection name "projects".
+const projects = mongoose.model('Project', projectSchema);
 
 
 // CREATE model *****************************************
