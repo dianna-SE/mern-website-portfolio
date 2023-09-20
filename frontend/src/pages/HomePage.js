@@ -1,51 +1,178 @@
-import React from 'react';
-import { MdOutlineEngineering } from 'react-icons/md';
+import React, { useEffect, useRef } from 'react';
+import { NavLink } from 'react-router-dom';
+import ImageGallery from 'react-image-gallery';
+import profilePic from '../data/profile-pic.jpg';
+import othelloPic from '../data/grid.png';
+import musePic from '../data/muse.png';
+import dogPic from '../data/dog.png';
+import { AiOutlineMenu, AiOutlineHome, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 // Change the function names and links
 // to fit your portfolio topic.
 
 function HomePage() {
+    const image = [
+
+        {
+          original: 'images/python-pygame-othello.png',
+          thumbnail: 'images/python-pygame-othello.png',
+          originalHeight: '450px',
+        },
+    ];
+
+    const colorTransitionRef = useRef(null);
+
+    useEffect(() => {
+        const isElementAtTop = (el) => {
+            const rect = el.getBoundingClientRect();
+            return rect.top <= 0;
+        };
+
+        const setBackgroundColor = () => {
+            let bgColor;
+            const width = window.innerWidth;
+
+            if (colorTransitionRef.current && isElementAtTop(colorTransitionRef.current)) {
+                bgColor = '#FFFFFF';
+            } 
+            else if (width >= 1080) {
+                bgColor = 'rgb(216, 216, 253)';
+            } 
+            else if (width >= 800) {
+                bgColor = '#C2D7F2';
+            } 
+            else {
+                // bgColor = '#f9dde0';
+                // bgColor = '#E9E4EA';
+                bgColor = '#CCC5DA';
+            }
+
+            document.body.style.backgroundColor = bgColor;
+        };
+
+        window.addEventListener('scroll', setBackgroundColor);
+        window.addEventListener('resize', setBackgroundColor);
+
+        // Set initial background color on component mount
+        setBackgroundColor();
+
+        return () => {
+            window.removeEventListener('scroll', setBackgroundColor);
+            window.removeEventListener('resize', setBackgroundColor);
+        };
+
+    }, []);
+
+    function handleContainerClick() {
+        window.open('https://www.google.com', '_blank');
+    }
+
   return (
     <>
+        <div className="home-header">
+            <img src={profilePic} alt="Profile" />
+            <h1>Hi, I'm Dianna.</h1>
+            <h2>CS student and developer</h2>
+            <h2>based in California!</h2>
 
-        <article>
-            <p>Hi! I’m Dianna Pham, and I am currently pursuing a B.S. in Computer Science at Oregon State University (OSU). As I learn more about the complexities and intricacies of web development, my main career goal is to leverage these skills and experiences that I learned in my time here at OSU to my future role as a software engineer. I aim to work with a development team to utilize my expertise in languages like Python, JavaScript, HTML, and CSS, as well as frameworks such as Django and React. Likewise, I strive to improve through learning, growth, and passion in computer science as I continue to pursue my path as a software engineer. </p>
+            <button>
+                <a href="/Dianna_Pham_Resume.pdf" download className="home-button">
+                Resume
+                </a>
+            </button>
+            {/* <a class="github-button" href="https://github.com/dianna-SE" target="_blank" rel="noopener noreferrer">
+                <AiFillGithub/>
+            </a> */}
+        </div>
+
         
-            <p>
-                The technologies that are used within the website are listed below – together, all the tools that I have used made it possible to build this well-designed, full-stack MERN website:
-            <ol>
-                <strong>HTML</strong>: Similar to the skeleton of a website, HTML was used to structure the content of this webpage and work hand in hand with CSS and JavaScript to develop a well-rounded website. 
-            </ol>
-            
-            <ol>
-                <strong>CSS</strong>: This was used to create the visualization of the webpage, and ensured that the styles and selectors were consistent with the overall design.
-            </ol>
+        <article>
+            <div class="img-container">
+                <div class="home-paragraphs">
+                    <h3>More than an engineer</h3>
+                    <p>I'm not just any engineer; I'm a leader with a proven work record. As a Shift Supervisor at Villa Dolce Melt LLC, I've transformed teams, honed communication, and turned customer concerns into satisfied solutions. I've found where tech meets passion, and that's my greatest strength.</p>
+                </div>
 
-            <ol>
-                <strong>JavaScript</strong>: The primary programming language for this application, this brought life to the functionality of the website by enabling interactive features, handling user input, manipulating the DOM (Document Object Model), and providing real-time updates without needing to refresh the page.
-            </ol>
+                <img class="img" src={othelloPic}  alt="profile-pic"/>
+            </div>
 
-            <ol>
-                <strong>MongoDB</strong>: Used for the backend side of this application, MongoDB is a NoSQL database used to handle storing data and data management within the server-side of the application.
-            </ol>
-            
-            <ol>
-                <strong>Express.js</strong>: This is the backbone of managing the server where it helped create real-time updates, route handling, and establish CRUD operations (Create, Read, Update, and Delete).
-            </ol>
+            <div class="img-container">
+            <img class="muse" src={musePic}  alt="profile-pic"/>
+                <div class="home-paragraphs">
+                    <h3>Done more than you think</h3>
+                    <p class="p2" >I've transformed complex computer science concepts into efficient, user-friendly applications. My projects showcase not just a student of the craft but a proactive problem solver, always delivering beyond expectations.</p>
+                </div>
+            </div>
 
-            <ol>
-                <strong>React</strong>: The frontend of the webpage, it was meant to handle the client-side for communication with the server within the framework. This also enhanced the user interface and integrated a single-page application (SPA) for a smoother process.
-            </ol>
+            <div class="img-container">
+                <div class="home-paragraphs">
+                    <h3>What I offer</h3>
+                    <p>Behind my education and work is a dedication to making an impact. Partner with me and you're not just getting skills—you're embracing passion and a commitment to results.</p>
+                </div>
 
-            <ol>
-                <strong>Node.js</strong>: Node.js provided a working environment for the backend and worked with Express.js to ensure that the communication between both the frontend and the backend coordinated with each other efficiently.
-            </ol>
+                <img class="img dog" id="color-transition" ref={colorTransitionRef}  src={dogPic}  alt="profile-pic"/>
+            </div>
 
-            <ol>
-                <strong>Visual Studio Code</strong>: An editor developed by Microsoft, it was used to assist with extensions, code formatting, debugging, with integrated terminal and version control to help build this full-stack MERN application. 
-            </ol>
+                <div class="works-intro">
+                    <h3>Discover my work</h3>
+                    <p>Every project is a fusion of creativity and technology. See where passion meets precision.</p>
+                </div>
 
-        </p>
+            <div class="home-works">
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
+                    <h5 class="bubble">Othello</h5>
+                    <h3>Python PyGame Application</h3>
+                    <p>Reinvented Othello with a refreshing take with contemporary tech, engaging users in a new digital experience.</p>       
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>April 2023 - May 2023</button>
+                    </div>
+                </div>
+
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/osu-cs261-assignment-6', '_blank')}>
+                    <h5 class="bubble">HashMap</h5>
+                    <h3>Data Structure & Algorithms</h3>
+                    <p>Tackled collisions through open addressing and separate chaining to deliver an efficient codebase ready for any challenge.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>June 2023 - Aug 2023</button>
+                    </div>
+                </div>
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/music-app-demo', '_blank')}>
+                    <h5 class="bubble">Muse</h5>
+                    <h3>React Application</h3>
+                    <p>Explore, discover, and indulge in a carefully curated selection of 20 handpicked songs.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>June 2022 - Oct 2022</button>
+                    </div>
+                </div>
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/justpaws', '_blank')}>
+                    <h5 class="bubble">justPaws</h5>
+                    <h3>Full Stack Django Application</h3>
+                    <p>A space where users connect, share, and engage through a universe of pups, all in a modern web environment.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>April 2022 - May 2022</button>
+                    </div>
+                </div>
+
+                <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/milk-project', '_blank')}>
+                    <h5 class="bubble">Milk</h5>
+                    <h3>React & Redux Application</h3>
+                    <p>Infused modern chat mechanics with a dairy-themed delight, enabling users to converse in one single server. Smooth UI meets creamy conversation.</p>
+                    <div class='dot-container'>
+                        <div class="tiny-dot"></div>
+                        <button>Feb 2022 - Mar 2023</button>
+                    </div>
+                </div>
+
+
+            </div>
         
         </article>
     </>

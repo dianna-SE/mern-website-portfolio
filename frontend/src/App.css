@@ -3,66 +3,310 @@
 
 
 /*   ----- Imports  -----  */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 @import "~react-image-gallery/styles/css/image-gallery.css";
-
 
 /*   ----- Variables  -----  */
 :root {
     /* Define 4 or more color variables using Hexadecimal, HSLa, or RGBa (Adobe Color Wheel)*/
     --textFont: 'Raleway', sans-serif;
     --headerFont: 'Ubuntu', sans-serif;
+    --text: 'Montserrat', sans-serif;
+    --pastelPink: #ffcdd2;
 
-    --deepTeal: #3D5257; /* text color */
-    --babyBlue: #A9D3DE; /* background color, light */
-    --skyBlue: #e8f4fc; 
-  
-    --slateBlue: #51658C;
-    --dullSkyBlue: #6D86A6;
-    --aliceBlue: #95ACBF;
-    --oxfordGreen: #082626; /* dark */
-    --riverEdge: #D9D3C7; /* light */
-    --lightEdge: #F5EEE1;  /* form text color */
-    --slateBlueTransparent: rgba(81, 101, 140, .5); /* transparent */
-    --oxfordGreenTransparent: rgba(8, 38, 38, .5); /* transparent */
-
+    --mauvePurple: #ccc5da;
+    --mauvePink: #f9dde0;
+    --babyBlue: #C2D7F2;
+    --pastelBlue: #D0E2F2;
+    --lightBeige: #E9E4EA;
+    --darkBlack: #051D26;
+    --darkGrey: #414C5C;
   }
+
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
   body {       /* Can alternatively define in html {} or :root {} */
     background-attachment: fixed;
-    background-image: url(images/catalina-island-pleasure-pier.jpg); /* background cover photo */
+    background-image: url(); /* background cover photo */
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center center;
-    margin: 0 4%; /* no top or bottom, margin for left and right */
-    color:var(--babyBlue);
+    margin: 0 1%; /* no top or bottom, margin for left and right */
+    color: var(--darkGrey);
     letter-spacing: 0.2px;
-    font-family: var(--textFont); /* Define with at least one font name and its related generic family name.*/
+    font-family: var(--textFont);  
     max-width: 100%; 
+
+    background-color: var(--pastelPink);
+    transition: background-color 0.5s ease-in-out;
   }
+
+  body.white-bg {
+    background-color: #FFFFFF; 
+}
+
+body.div-in-view {
+  background-color: #FFFFFF;
+}
   
   /*  ----- Page layout blocks -----  */
   h2, h3 {
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    padding-bottom: 7px;
-    border-bottom: 4px solid var(--riverEdge);
-
+    font-weight: 500;
   }
   .homepage {
     padding: 0 5rem;
   }
 
   .homepage-logo {
-    padding-right: 2%;
+    padding-right: 15%;
   }
 
   .homepage p {
     padding: 0 1rem;
   }
 
+
+  .home-paragraphs {
+    text-align: center;
+    margin-bottom: 30%;
+  }
+
+  .home-paragraphs>img {
+    margin-left: -5%;
+    border-radius: 20px;
+    height: auto;
+  }
+
+  p {
+    color: rgb(91, 91, 91);
+    display: flex;
+    text-align: center;
+    margin-left: -5%;  /* THIS SHIFTS THE PARAGRAPH TO THE LEFT MORE!!! */
+    font-size: 16px;
+  }
+
+  .home-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .home-header img {
+    margin-bottom: 3%;
+    border-radius: 50%;
+    width: 180px;        /* Or whatever size you prefer */
+    height: 180px;       /* Ensure it matches the width for a perfect circle */
+    object-fit: cover;   /* This ensures that the image covers the box without being stretched or squished */
+    overflow: hidden; 
+  }
+
+  .home-header>h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-header>h2 {
+    font-size: 1.5rem;
+    margin-bottom: 4%;
+  }
+
+  .home-paragraphs p{
+    margin-bottom: 10%;
+    word-spacing: 1px;
+  }
+
+  .home-header button {
+    background-color: #414C5C;
+    color: white;
+    border-radius: 50px;
+    margin-top: 3%;
+    margin-bottom: 15%;
+    width: 30%;
+  }
+
+  .home-button {
+    background-color: #414C5C;
+    color: white;
+    border-radius: 50px;
+    margin-top: -0%;
+    margin-bottom: 15%;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .home-works {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    justify-items: start;  
+    margin-left: -8%;
+}
+
+.home-projects-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-works h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+.home-works h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  color: #414C5C;
+  margin-left: 0%;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  font-size: 16px;
+}
+
+.home-works p {
+  display: flex;
+  text-align: left;
+  font-weight: 200;
+  letter-spacing: 0.2px;
+  margin: -3% 0% 10% 0%; 
+}
+
+  .home-works .bubble {
+    font-weight: 100px;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    border-radius: 15px; /* Rounded corners */
+    padding: 1px 10px; /* Padding to give space around the text */
+    margin: 5px; /* Margin to separate the bubbles */
+    display: inline-block; /* To ensure padding and margins are respected */
+    background-color: #e3cee7; /* Red */
+    margin-left: -0.5%;
+    margin-bottom: 3%;
+}
+
+.github-button {
+  display: inline-block;
+  padding: 7px 45px; 
+  border-radius: 20px;
+  background-color: var(--darkGrey); /* Example color; adjust as needed */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px; /* Adjust as needed */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 3%;
+  margin-bottom: 8%;
+
+  /* display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: var(--mauvePink);
+  border-radius: 50%; 
+  width: 45px; 
+  height: 45px; 
+  font-size: 15px; 
+  font-weight: 500; */
+}
+
+.github-button:hover {
+  background-color: #555; /* Example color for hover effect */
+}
+
+.works-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;     
+  text-align: center; 
+  margin-bottom: 5%;
+}
+
+.works-intro>h3{
+  margin-bottom: 0%;
+}
+
+.works-intro>p{
+  text-align: center;
+  font-size: 20px;
+  width: 400px;
+  line-height: 1.8rem;
+}
+
+.tiny-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #e3cee7;  /* Or any color of your choice */
+  border-radius: 50%;  /* Makes it a circle */
+  margin-right: -2%;
+  margin-left: 5%;
+}
+
+    .project-details {
+      margin: 5%;
+      padding: 3% 4% 0% 4%;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .project-details:hover{
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      background-color: rgb(236, 236, 236);
+    }
+
+.dot-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: -8% 0% 10% 0%;
+  transition: 0.3s;
+  width: 65%;
+}
+
+.dot-container button {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 1% 0% 0% -4%;
+  text-decoration: none;
+  padding: 2px 20px;
+  color: rgb(91, 91, 91);
+  width: 100%;
+}
+.dot-container button a,
+.dot-container button a:active,
+.dot-container button a:hover,
+.dot-container button a:visited {
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: rgb(91, 91, 91);
+  font-size: 13px;
+  font-weight: 400;
+}
+/* .dot-container:hover {
+  background-color: rgb(238, 238, 238);
+  border-radius: 20px;  
+  transition: 0.3s;
+} */
+.dot-container button a:focus {
+    text-decoration: none;
+}
+
+.dot-container p {
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  .home-header h2 {
+    margin-top: -1%;
+  }
   header {
     display: flex;
     align-items: center;
@@ -93,8 +337,16 @@
     }
       #topic1 {}
       #topic2 {}
+
+  .article-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
   footer {
-    margin: 2%;
+    background-color: white;
+    margin: 2% 2% 2% 4%;
     padding: 2%;
     background-color: var(--deepTeal);
     border: 5px solid var(--slateBlueTransparent);
@@ -122,14 +374,32 @@
     border: 5px solid var(--oxfordGreenTransparent);
   }
   nav.local.topics a {
-    color: var(--babyBlue);
+    color: var(--darkGrey);
     border-radius: 5%;
     text-decoration: none;
   }
   nav.local.topics a:hover {
     background-color: var(--slateBlueTransparent);
-    border-top: 1px solid var(--babyBlue);
+    border-top: 1px solid var(--darkGrey);
     font-weight:bold;
+  }
+
+  .nav-link {
+    display: flex;           /* Set to flex container */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;     /* Vertically center the content */
+    transition: 0.4s ease;
+    height: 20%;
+    padding: 4px 13px;
+    margin: 0px 3px;
+    border-radius: 20px;
+  }
+
+  .nav-link:hover {
+    transition: 0.4s ease;
+    background-color: #e3cee7;
+    color: #414C5C;
+    border-radius: 20px;
   }
 
   /* global nav */
@@ -137,19 +407,19 @@
     text-decoration: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-between;
     align-items: center;
-    /* background-color: var(--slateBlueTransparent); */
-    margin: 0% 2%;
+    margin: 2% 2% 0% 2%;
     padding: 0.5%;
     background-color: var(--slateBlueTransparent);
-
+    display: flex;
+    justify-content: space-between;
   }
   nav a {
     margin: 1px;
     padding: 15px 5px;
     background-color: var(--slateBlue);
-    color: var(--babyBlue);
+    color: var(--darkGrey);
     border-radius: 5%;
     text-decoration: none;
     border: 3px solid var(--slateBlueTransparent);
@@ -157,6 +427,72 @@
   nav a:hover {
     background-color: var(--oxfordGreen);
   }
+
+  .left-group {
+    display: flex;
+    align-items: center;  /* Vertically align items in the center */
+    justify-content: flex-start;
+}
+
+.nav-left-group {
+  position: relative; /* Makes sure the child elements (with absolute positioning) are positioned relative to this container */
+  width: 150px; /* Example width, adjust as necessary */
+  height: 150px;
+}
+
+.center-group {
+  display: flex;           /* Set to flex container */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center;     /* Vertically center the content */
+  flex-direction: row;     /* Set the direction to row (this is the default, so it's optional) */
+  gap: 10px;
+  margin-left: 0%;
+}
+
+  .sliding-menu {
+    position: fixed;
+    top: 0;
+    right: -1vw; 
+    width: 100vw;  
+    height: 100vh; 
+    background-color: #f9f9f9;
+    transition: right 0.5s ease; 
+    z-index: 1000; 
+    padding: 1rem;
+}
+
+/* When the menu is open */
+.sliding-menu.open {
+    right: 0;
+}
+
+/* Styling for the NavLinks inside the menu */
+.sliding-menu a {
+    color: #414C5C;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    margin-left: 5%;
+}
+
+.sliding-menu a:hover {
+    color: var(--pastelPink);
+}
+
+/* Close button styling */
+.sliding-menu button {
+  display: flex;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 5%
+    
+}
+
   
   /*  -----  Typography  ----- */
   p {}
@@ -173,12 +509,15 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--headerFont)
   } 
-  h1 {}
+  h1 {
+    margin-bottom: 10%;
+  }
   h2 {
     margin-top: 35px;
   }
   h3 {
     font-size: 130%;
+    margin-left: -5%;
   }
   h4 {}
   h5 {}
@@ -212,7 +551,7 @@
   /*  ----- Table ----- */
   table {
     background-color: var(--deepTeal);
-    color: var(--babyBlue);
+    color: var(--darkGrey);
   }
   caption {
     text-align: left;
@@ -276,6 +615,21 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  .contact-fieldset button {
+    font-size: 15px;
+    background-color: var(--mauvePink);  
+    border-radius: 20px;  
+    padding: 7px 15px;   
+    display: inline-block; 
+    width: 90%;
+    border: 2px solid var(--mauvePurple)
+  }
+
+  .contact-fieldset textarea {
+    height: 23vh;
+  }
+
   fieldset {
     border: 2px solid var(--riverEdge);
     background-color: var(--deepTeal);
@@ -291,7 +645,7 @@
   }
 
     legend {
-      color: var(--babyBlue);
+      color: var(--darkGrey);
       font-size: 150%;
     }
   .label-questions {
@@ -315,6 +669,12 @@
       font-size: 110%;
       padding: 0.5%;
       font-family: inherit;
+      background-color: white;  
+      border-radius: 20px;  
+      padding: 7px 15px;   
+      display: inline-block;
+      border: 2px solid var(--mauvePurple);
+      width: 80%;
     }
     input {
       margin-top: 2%;
@@ -332,7 +692,7 @@
       border-radius: 10px; /* Adjust the value to control the amount of rounding */
       border: 2px solid var(--riverEdge);
       padding: 10px 20px;
-      color: var(--babyBlue);
+      color: var(--darkGrey);
       background-color: var(--slateBlue);
       margin-top: 4%;
     }
@@ -368,8 +728,6 @@
     select {}
       optgroup {}
       option {}
-    textarea {}
-
   .mocktail-list th{
       padding: 5px 10px;
   }
@@ -485,6 +843,44 @@
     .answer{
       margin-left: 2.5%;
     }
+
+
+  /* ----- Images ----- */
+    
+    .img-container {
+      /* display: none; */
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s linear, visibility 0.3s linear;
+    }
+    
+    .img-container img {
+      margin-bottom: 10%;
+    } 
+
+    .img {
+      position: relative;
+      height: 200px;
+      width: 200px;
+      padding: 3rem;
+      border-radius: 60px;
+      flex-shrink: 0; 
+      flex-grow: 0; 
+    }
+
+    .muse {
+      height: 340px;
+      width: 190px;
+      margin-right: 10%;
+      margin-top: -20%;
+    }
+
+    .dog {
+      height: 250px;
+      width: 200px;
+    }
   
   /* ----- Media ----- */
   figure {}
@@ -500,11 +896,6 @@
   object {}
   
   /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
-  /* .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-  } */
   .gallery-caption {
     border-bottom: 4px solid var(--riverEdge);
     font: var(--textFont);
@@ -515,33 +906,6 @@
   .gallery-header {
     border-bottom: 0px;
   }
-
-  /* figure */
-  /* .gallery figure {
-    display: flex;
-    border: 5px solid var(--oxfordGreen);
-    background-color: var(--oxfordGreenTransparent);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 450px;
-    box-sizing: border-box;
-    padding: 80px 10px;
-    max-width: 300px;
-  }  */
-
-  /* figure caption */
-  /* .gallery figcaption {
-    display: flex;
-    padding: 20px;
-    color: var(--babyBlue);
-    margin: 1%;
-  } */
-  /* .gallery img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  } */
 
   .image-gallery-svg {
     color: var(--riverEdge);
@@ -559,8 +923,6 @@
     padding: 0.3rem;
     border-radius: 95%;
   }
-
-  
 
   .icon:hover {
     color: var(--oxfordGreen);
@@ -587,14 +949,567 @@
   .tshadow {} 
   .gradient {}
   .shape {}
+
+  /* MISCELLANEOUS */
+  .bubble {
+    font-size: 15px;
+    background-color: var(--pastelPink);  
+    border-radius: 20px;  
+    padding: 7px 15px;   
+    display: inline-block;  
+}
+
+.logo-bubble {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: var(--mauvePink);
+  border-radius: 50%; 
+  width: 45px; 
+  height: 45px; 
+  font-size: 15px; 
+  font-weight: 500;
+}
   
   @keyframes App-logo {}
+  /* @media (max-width: 600px) {
+    .img-container > img {
+      opacity: 0;        
+      visibility: hidden;  
+      pointer-events: none; 
+      display: none;
+    }
+
+    .img-container h3 {
+      font-size: 25px;
+      font-weight: 600;
+      border-radius: 20px;  
+      padding: 7px 15px;   
+      display: inline-block;  
+    }
+
+    .works-intro h3 {
+      font-size: 20px;
+      font-weight: 600;
+      background-color: #e3cee7;  
+      border-radius: 20px;  
+      padding: 7px 15px;   
+      display: inline-block;  
+    }
+} */
+  /*   ===== TABLET  media query overrides mobile styles (MEDIUM SIZE)===== */
+
+  @media all and (min-width: 500px) {
+
+    .center-group {
+      margin-left: -2%;
+    }
+    .dot-container {
+      width: 50%;
+    } 
+  }
+
+  @media all and (min-width: 600px) {
+    body {
+      background-color: rgb(202, 237, 255);
+    }
+
+    .home-header h1 {
+      font-size: 3rem;
+    }
+
+    .home-header>h2 {
+      font-size: 23px;
+      margin-bottom: 2.5%;
+    }
+
+    .home-header button {
+      margin-top: 2.5%;
+      letter-spacing: 0.5px;
+      margin-top: 2.5%;
+    }
+
+    .home-paragraphs {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 500px; /* Set to your desired width */
+      margin-right: auto;
+    }
+
+    .home-paragraphs h3 {
+      font-size: 25px;
+    }
+
+    .home-paragraphs p {
+      font-size: 15px;
+    }
+
+    .home-works {
+      display: grid;
+    }
+
+    .home-works p {
+      margin-top: -3%;
+    }
+
+    .home-works h3 {
+      margin-top: -1%;
+      margin-bottom: 4%;
+    }
+
+    .home-works {
+      margin-top: -1%;
+      margin-bottom: 4%;
+    }
+
+    .home-works .bubble {
+      margin-left: 0%;
+    }
+
+
+    .dot-container {
+      width: 45%;
+    }
+
+    h3 {
+      display: flex;
+      flex-direction: row;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
   
-  /*   ===== TABLET  media query overrides mobile styles ===== */
-  @media all and (min-width: 600px) {}
+    p {
+      margin-top: -0.5%;
+      display: flex;
+      text-align: left;
+    }
+
+    .home-paragraphs:nth-child(2) {
+      margin-left: auto; /* This will push the div to the right side */
+      margin-right: 0;  /* This ensures it sticks to the right */
+    }
+
+    .works-intro>p{
+      text-align: center;
+      font-size: 20px;
+      width: 550px;
+      line-height: 1.8rem;
+    }
+
+    .works-intro>h3{
+      margin-bottom: 5%;
+    }
+
+    .project-details {
+      margin: 5%;
+      padding: 3% 4% 0% 4%;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .project-details:hover{
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      background-color: rgb(236, 236, 236);
+    }
+
+    .img-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .img {
+      position: relative;
+      height: 250px;
+      width: 240px;
+      padding: 3rem;
+      border-radius: 60px;
+      flex-shrink: 0; 
+      flex-grow: 0; 
+      margin-top: -15%;
+    }
+
+    .muse {
+      height: 350px;
+      width: 190px;
+      margin-top: -20%;
+    }
+
+    .dog {
+      height: 340px;
+      width: 270px;
+    }
+
+
+  }
+
+  @media all and (min-width: 650px) {
+    .dot-container {
+      width: 40%;
+    }
+  }
+
+
+  @media all and (min-width: 800px) {
+    body {
+      background-color: rgb(213, 229, 255);
+    }
+
+    .home-header>h1 {
+      font-size: 3rem;
+      margin-bottom: 7%;
+    }
+
+    .home-header>h2 {
+      font-size: 23px;
+      margin-bottom: 2.5%;
+    }
+
+    .home-header img {
+      border-radius: 50%;
+      width: 220px;        /* Or whatever size you prefer */
+      height: 220px;       /* Ensure it matches the width for a perfect circle */
+      object-fit: cover;   /* This ensures that the image covers the box without being stretched or squished */
+      overflow: hidden; 
+    }
+
+    .home-header button {
+      margin-top: 2.5%;
+      letter-spacing: 0.5px;
+      width: 160px;
+      margin-top: 2.5%;
+    }
+
+    .home-paragraphs {
+      margin-bottom: 15%;
+    }
+
+    .home-paragraphs>p {
+      font-size: 18px;
+      line-height: 1.6rem;
+      color: rgb(76, 76, 76);
+    }
+
+    .home-works p {
+      margin-top: -1%;
+      line-height: 1.6rem;
+      font-size: 1rem;
+      letter-spacing: 0px;
+      color: #414C5C;
+    }
+
+    .project-details .bubble {
+      background-color: rgb(186, 217, 255);
+    }
+
+    .nav-link {
+      transition: 0.4s ease;
+      padding: 3px 20px;
+      margin: 0px 5px;
+      border-radius: 20px;
+      font-size: 18px;
+    }
   
-  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
-  @media all and (min-width: 1080px) {}
+    .nav-link:hover {
+      transition: 0.4s ease;
+      background-color: rgb(174, 208, 249);
+      color: #414C5C;
+      border-radius: 20px;
+    }
+
+    .home-works h3 {
+      margin-top: 0%;
+      margin-bottom: 4%;
+    }
+
+    .home-works button {
+      margin-top: -0.1%;
+    }
+
+    .home-works .bubble {
+      margin-left: 0%;
+    }
+
+    .home-works {
+      display: grid;
+      margin-left: 4%;
+      grid-template-columns: repeat(2, 1fr);  /* three equal columns */
+      gap: 20px;  /* adjust for desired spacing between grid items */
+  }
+  
+    .project-details {
+      margin: 5%;
+    }
+
+    .dot-container {
+      width: 90%;
+      margin-top: -5%;
+    }
+
+    .dot-container button {
+      width: 100%;
+      margin-top: 0%;
+    }
+
+    .tiny-dot {
+      margin-right: -3%;
+      background-color: rgb(213, 229, 255);
+    }
+
+    .project-details {
+      margin: 5%;
+      padding: 3% 4% 0% 4%;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .project-details:hover{
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      background-color: rgb(236, 236, 236);
+    }
+
+    .home-works .bubble {
+      margin-left: 0%;
+      border-radius: 20px;  
+    }
+
+    .works-intro {
+      margin-top: 25%;
+    }
+
+    .works-intro>h3 {
+      margin-bottom: 4%;
+    }
+
+    .img {
+      height: 300px;
+      width: 300px;
+      margin-top: 0%;
+    }
+
+    .muse {
+      height: 450px;
+      width: 250px;
+      margin-right: 15%;
+      margin-left: 4%;
+      margin-top: 10%;
+    }
+
+    .dog {
+        height: 380px;
+        width: 340px;
+        margin-top: 1%;
+    }
+
+    .menu-icon {
+      font-size: 18px;
+    }
+
+  }
+
+  @media all and (min-width: 900px) {
+    .dot-container {
+      width: 60%;
+    }
+  }
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles (LARGE SIZE) ===== */
+  @media all and (min-width: 1080px) {
+    body {
+      background-color: rgb(216, 216, 253);
+    }
+
+    .home-header>h1 {
+      font-size: 4rem;
+      margin-bottom: 6%;
+    }
+
+    .home-header>h2 {
+      font-size: 30px;
+      margin-bottom: 2.8%;
+    }
+
+    .home-header img {
+      border-radius: 50%;
+      width: 280px;        /* Or whatever size you prefer */
+      height: 280px;       /* Ensure it matches the width for a perfect circle */
+      object-fit: cover;   /* This ensures that the image covers the box without being stretched or squished */
+      overflow: hidden; 
+    }
+
+    .home-header button {
+      letter-spacing: 0.5px;
+      width: 20%;
+      margin-top: 2.5%;
+    }
+
+    .home-paragraphs {
+      margin-bottom: 10%;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 600px;
+    }
+
+    .home-paragraphs>p {
+      font-size: 20px;
+      line-height: 1.8rem;
+      color: rgb(76, 76, 76);
+    }
+
+    .home-works {
+      display: grid;
+      margin-left: 4%;
+      grid-template-columns: repeat(3, 1fr);  /* three equal columns */
+      gap: 20px;  /* adjust for desired spacing between grid items */
+      width: 100%;
+  }
+
+    .home-works p {
+      margin-top: -1%;
+      line-height: 1.4rem;
+      font-size: 1.1rem;
+      letter-spacing: 0px;
+      color: #414C5C;
+    }
+
+    .home-works h3 {
+      margin-top: 0%;
+      margin-bottom: 4%;
+    }
+
+    .home-works button {
+      margin-top: -0.1%;
+    }
+
+    .home-works .bubble {
+      background-color: rgb(201, 201, 252);
+      margin-left: 0%;
+    }
+  
+    .project-details {
+      margin: 5%;
+      padding: 3% 4% 3% 4%;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .project-details:hover{
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      background-color: rgb(236, 236, 236);
+    }
+
+    .dot-container {
+      color: #414C5C;
+      margin-top: -5%;
+      width: 100%;
+    }
+
+    .dot-container button{
+      width: 80%;
+    }
+
+    .tiny-dot {
+      margin-right: -3%;
+      background-color: rgb(216, 216, 253);
+    }
+
+    .home-works .bubble {
+      margin-left: 0%;
+      border-radius: 20px;  
+    }
+
+    .dot-container button {
+      margin-left: -5%;
+    }
+
+    .nav-link, .menu-icon{
+      transition: 0.4s ease;
+      padding: 3px 20px;
+      margin: 0px 10px;
+      border-radius: 20px;
+      font-size: 20px;
+    }
+    .nav-link:hover {
+      transition: 0.4s ease;
+      background-color: rgb(183, 183, 249);
+      color: #414C5C;
+      border-radius: 20px;
+    }
+
+    .works-intro {
+      margin-top: 15%;
+    }
+
+    .works-intro>h3 {
+      margin-bottom: 3%;
+    }
+
+    .works-intro>p{
+      text-align: center;
+      font-size: 20px;
+      width: 650px;
+      line-height: 1.8rem;
+    }
+
+    .img {
+      height: 450px;
+      width: 450px;
+      margin-top: 0%;
+    }
+
+    .muse {
+      height: 600px;
+      width: 330px;
+      margin-right: 15%;
+      margin-left: 5%;
+      margin-top: 10%;
+    }
+
+    .dog {
+      height: 550px;
+      width: 500px;
+    }
+
+    .center-group {
+      margin-left: 3%;
+    }
+  }
+
+  @media all and (min-width: 1180px) {
+
+    .home-header button {
+      width: 15%;
+    }
+
+    .dot-container {
+      width: 93%;
+    }
+  }
+
+  @media all and (min-width: 1300px) {
+    .home-header button {
+      width: 15%;
+    }
+
+    .dot-container {
+      width: 70%;
+    }
+  }
+
+
+  @media all and (min-width: 1500px) {
+    .dot-container {
+      width: 70%;
+    }
+  }
+  
   
   /*   ===== PRINT  media query overrides previous styles =====  */
-  @media print {}
+  @media print {
+  }

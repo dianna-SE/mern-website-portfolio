@@ -6,10 +6,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import './App.css';
 
-// Import Pages (but only the ones you need).
-// For Create and Edit, use the form OR table design; not both.
-// If your schema requires LONG data input, then use the FORM design.
-// If your schema requires SHORT data input, then use the TABLE design.
 
 import products from './data/products.js'
 import HomePage from './pages/HomePage.js';
@@ -30,12 +26,6 @@ function App() {
   return (
     <>
       <BrowserRouter>
-
-          <header class="homepage">
-            <img class="homepage-logo"src="favicon-32x32.png" alt=""/>
-            <h1>Dianna Pham</h1>
-            <p> Welcome to my portfolio! Here you can explore my web development projects, skills, and experiences. Feel free to reach out to me if you have any questions or opportunities!</p>
-          </header>
 
           <Navigation />
 
