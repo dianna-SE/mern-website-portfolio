@@ -6,7 +6,8 @@ The projects you see below the introduction are fetched from MongoDB, demonstrat
 
 Post-course, I deployed the site using AWS Amplify, highlighting my ability to take a project from development to live production. Throughout the process, I've used Git and GitHub for version control, ensuring that every step of my development is well-documented and organized.
 
-![Screenshot of My Portfolio](./frontend/images/screenshot.png)
+![Screenshot of My Portfolio](<img width="1328" alt="screenshot" src="https://github.com/dianna-SE/mern-website-portfolio/assets/97206862/bcf670f6-1122-4a84-8a30-7f0920d21902">
+)
 
 ---
 
