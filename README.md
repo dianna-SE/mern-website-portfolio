@@ -9,29 +9,31 @@ The projects listed below the introduction is managed by MongoDB.
 ---
 
 ## Features
+- **Clean Design**: Utilizes a minimalist and intuitive interface ensuring that users can easily navigate and understand the content without being overwhelmed. This simplicity emphasizes the projects and achievements, making the portfolio more effective and user-friendly.
 
-- **Dynamic Project Listing**: Automatically updates the portfolio page with projects listed in the database.
 - **Responsive Design**: Optimized for various screen sizes, ensuring a seamless experience on devices from mobile to desktop.
-- **Contact Form**: Integrated with the backend to receive messages and inquiries directly from visitors.
-- **Admin Dashboard**: A protected route that allows easy management of the projects listed on the portfolio.
+
+- **Project Management**: Automatically updates the portfolio page with projects listed in the database dynamically. Integrated with the backend to handle and update project data within MongoDB.
+
+- **Error Handling**:  Implements robust error handling mechanisms, ensuring that any inconsistencies or issues with the backend or frontend project data are addressed promptly, and users are provided with informative feedback to enhance their overall experience.
 
 ---
 
-#### Setup:
+### Setup:
 - **MongoDB Atlas**: This is utilized for data management. A MongoDB Atlas account must be set up. Create a new cluster using Google Cloud and connect to the recommended region to start handling project data.
-- Register for a [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas/register) if you don't have one.
-- Create a new cluster using Google Cloud.
-- Ensure you connect to the recommended region to optimally manage project data.
+1. Register for a [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas/register) if you don't have one.
+2. Create a new cluster using Google Cloud.
+3. Ensure you connect to the recommended region to optimally manage project data.
   
 - **Token**: A token is required for authentication. Generate a token and add it to your `.env` file within the backend folder with the variable name.
 
 
 - **Local Host Configuration**: Specify the local hosts you'll be working with in your `.env` file. 
--Backend: Add the connection string and the port string.
+- **Backend**: Add the connection string and the port string.
 `MONGODB_CONNECT_STRING='mongodb+srv://<username>:<password>@<your-cluster-url>'`
 `PORT=3000`
 
--Frontend: Add the local port string.
+- **Frontend**: Add the local port string.
 `PORT=8000`
 
 ---
