@@ -17,14 +17,16 @@ function MocktailList({ mocktail, mocktails, onAdd, onDelete, onEdit }) {
     return (
         
         <table id="mocktails">
-            <caption>You can add, edit, or delete projects from the current collection.</caption>
+            <caption>Add, edit, or delete projects from the current list.</caption>
             <thead>
                 <tr class="mocktail-list">
                     <th>Name</th>
                     <th></th>
-                    <th>Stack</th>
                     <th>Description</th>
+                    <th>Technologies</th>
                     <th>Date</th>
+                    <th>Update</th>
+                    <th>Delete</th>
                     <th class="add"><button onClick={() => onAdd(mocktail)}><BiMessageSquareAdd class="icon"/></button></th>
                 </tr>
             </thead>

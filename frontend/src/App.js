@@ -37,6 +37,7 @@ function App() {
                     <Route path="/mocktails" element={<MocktailsPage setMocktail={setMocktailToEdit}/>} />
                     <Route path="/create" element={<AddMocktailPageForm />} /> 
                     <Route path="/update" element={<EditMocktailPageForm mocktailToEdit={mocktail} />} />
+                    {/* <Route path="/" element={<HomePage/>} /> */}
                     <Route path="/" element={<HomePage/>} />
                     <Route path="/topics" element={<TopicsPage/>} />
                     <Route path="/mocktails" element={<MocktailsPage/>} />

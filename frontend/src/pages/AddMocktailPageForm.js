@@ -40,75 +40,48 @@ export const AddMocktailPageForm = () => {
     return (
         <>
         <article>
-            <h2>< BiSolidDrink/>  Add a mocktail</h2>
-            <p>Fill in the details below to create a new mocktail. Once you've entered the drink, click 'Add' to include it in the collection.</p>
-
 
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset class="edit-mocktail">
-                    <legend>Add mocktails</legend>
+                    <legend>Project</legend>
 
 
-                    <label for="drink">Mocktail</label>
+                    <label for="drink">Name</label>
                     <input
                         type="text"
-                        placeholder="Name"
                         value={drink}
                         onChange={e => setDrink(e.target.value)} 
                         id="drink" 
                         required />
-                    
 
-
-                    <label for="ingredients">Ingredients</label>
+                    <label for="instructions">Description</label>
                     <textarea
-                        value={ingredients}
-                        placeholder="(e.g., '1 cup sugar')"
-                        onChange={e => setIngredients(e.target.value.split('\n'))}
-                        id="ingredients"  
-                        required />
-
-
-
-                    <label for="instructions">Instructions</label>
-                    <textarea
-                        placeholder="(e.g., 'Add the lemon juice'.)"
                         value={instructions.join('\n')}
                         onChange={e => setInstructions(e.target.value.split('\n'))}
                         id="instructions" 
                         required />
 
-
-
-                    <label for="servings">Servings</label>
-                    <input
-                        type="number"
-                        placeholder="(per drink)"
-                        value={servings}
-                        onChange={e => setServings(e.target.value)} 
-                        min="1"
-                        max="99"
-                        id="servings" 
-                        required/>
-
-                    <label for="preparationTime">Preparation Time</label>
-                    <input
-                        type="text"
-                        placeholder="(e.g., '60mins')"
-                        value={preparationTime}
-                        onChange={e => setPreparationTime(e.target.value)} 
-                        min="1"
-                        max="99"
-                        id="preparationTime" 
+                    <label for="ingredients">Technologies</label>
+                    <textarea
+                        value={ingredients}
+                        onChange={e => setIngredients(e.target.value.split('\n'))}
+                        id="ingredients"  
                         required />
 
                     <label for="date">Date</label>
                     <input
                         type="date"
-                        placeholder="YY/MM/DD"
                         value={date}
                         onChange={e => setDate(e.target.value)} 
                         id="date" 
+                        required />
+
+                    <label for="drink">URL link</label>
+                    <input
+                        type="text"
+                        value={drink}
+                        onChange={e => setDrink(e.target.value)} 
+                        id="drink" 
                         required />
 
 
@@ -118,7 +91,7 @@ export const AddMocktailPageForm = () => {
                         type="submit"
                         onClick={addMocktail}
                         id="submit"
-                    >Add drink</button></label>
+                    >Create project</button></label>
 
                     
                 </fieldset>

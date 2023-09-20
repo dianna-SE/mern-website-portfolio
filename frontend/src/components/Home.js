@@ -1,93 +1,35 @@
-import React, { useEffect, useRef, useState } from 'react';
-import profilePic from '../data/profile-pic.jpg';
+import React, { useState, useRef }  from 'react';
+import { MdOutlineDeleteForever } from 'react-icons/md';
+import { AiOutlineEdit, AiOutlinePlusCircle } from 'react-icons/ai';
+
+
 import othelloPic from '../data/grid.png';
 import musePic from '../data/muse.png';
 import dogPic from '../data/dog.png';
-import { AiOutlineMenu, AiOutlineHome, AiFillGithub, AiFillLinkedin, AiOutlineEdit } from 'react-icons/ai';
-import { MdOutlineDeleteForever } from 'react-icons/md';
 
-function HomePage({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
-    // const date = useState(mocktail.date.slice(0, 10));
+
+
+function Home({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
+    const date = useState(mocktail.date.slice(0, 10));
 
     const colorTransitionRef = useRef(null);
-
-    useEffect(() => {
-        const isElementAtTop = (el) => {
-            const rect = el.getBoundingClientRect();
-            return rect.top <= 0;
-        };
-
-        const setBackgroundColor = () => {
-            let bgColor;
-            const width = window.innerWidth;
-
-            if (colorTransitionRef.current && isElementAtTop(colorTransitionRef.current)) {
-                bgColor = '#FFFFFF';
-            } 
-            else if (width >= 1080) {
-                bgColor = 'rgb(216, 216, 253)';
-            } 
-            else if (width >= 800) {
-                bgColor = '#C2D7F2';
-            } 
-            else {
-                // bgColor = '#f9dde0';
-                // bgColor = '#E9E4EA';
-                bgColor = '#CCC5DA';
-            }
-
-            document.body.style.backgroundColor = bgColor;
-        };
-
-        window.addEventListener('scroll', setBackgroundColor);
-        window.addEventListener('resize', setBackgroundColor);
-
-        // Set initial background color on component mount
-        setBackgroundColor();
-
-        return () => {
-            window.removeEventListener('scroll', setBackgroundColor);
-            window.removeEventListener('resize', setBackgroundColor);
-        };
-
-    }, []);
-
-    function handleContainerClick() {
-        window.open('https://www.google.com', '_blank');
-    }
-
-  return (
-    <>
-
+ 
+    return (
+        <>
         <tr class="mocktail-table">
             <td>{mocktail.drink}</td> 
             <td class="filler"></td>
             <td>{renderWithLineBreaks(mocktail.instructions)}</td> 
             <td>{renderWithLineBreaks(mocktail.ingredients)}</td> 
-            {/* <td class="date">{date}</td> */}
+            <td class="date">{date}</td>
             {/* <td class="action-button"><button onClick={() => onAdd(mocktail)}><AiOutlinePlusCircle class="icon"/></button></td> */}
             <td class="action-button"><button onClick={() => onEdit(mocktail)}><AiOutlineEdit class="icon"/></button></td>
             <td class="action-button"><button onClick={() => onDelete(mocktail._id)}><MdOutlineDeleteForever class="icon"/></button></td>
         </tr>
 
-        <div className="home-header">
-            <img src={profilePic} alt="Profile" />
-            <h1>Hi, I'm Dianna.</h1>
-            <h2>CS student and developer</h2>
-            <h2>based in California!</h2>
-
-            <button>
-                <a href="/Dianna_Pham_Resume.pdf" download className="home-button">
-                Resume
-                </a>
-            </button>
-            {/* <a class="github-button" href="https://github.com/dianna-SE" target="_blank" rel="noopener noreferrer">
-                <AiFillGithub/>
-            </a> */}
-        </div>
-
-        
         <article>
+
+
             <div class="img-container">
                 <div class="home-paragraphs">
                     <h3>More than an engineer</h3>
@@ -121,15 +63,17 @@ function HomePage({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
 
             <div class="home-works">
 
+                {/* TEST!!!!!! */}
                 <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
                     <h5 class="bubble">{mocktail.drink}</h5>
                     <h3>{mocktail.drink}</h3>
                     <p>{mocktail.instructions}</p>       
                     <div class='dot-container'>
                         <div class="tiny-dot"></div>
-                        {/* <button>{date}</button> */}
+                        <button>{date}</button>
                     </div>
                 </div>
+                {/* TEST!!!!!! */}
 
                 <div class="project-details" onClick={() => window.open('https://github.com/dianna-SE/othello-pygame', '_blank')}>
                     <h5 class="bubble">Othello</h5>
@@ -186,8 +130,9 @@ function HomePage({ mocktail, onAdd, onDelete, onEdit, renderWithLineBreaks }) {
             </div>
         
         </article>
-    </>
-  );
-}
+        </>
 
-export default HomePage;
+
+    );
+}
+export default Home
