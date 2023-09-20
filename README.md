@@ -1,8 +1,10 @@
 # Portfolio Website
 
-This is a personal portfolio website built using the MERN (MongoDB, Express.js, React, Node.js) stack. The website dynamically lists projects which are managed and served from the backend.
+Welcome to my personal portfolio website, a culmination of dedicated work and learning over the duration of my web development course quarter. This portfolio website is the result of work I did during my web development course. Initially built based on the course guidelines, I later redesigned it and integrated a backend with MongoDB to manage and display projects dynamically.
 
-The projects listed below the introduction is managed by MongoDB.
+The projects you see below the introduction are fetched from MongoDB, demonstrating my skills in database management.
+
+Post-course, I deployed the site using AWS Amplify, highlighting my ability to take a project from development to live production. Throughout the process, I've used Git and GitHub for version control, ensuring that every step of my development is well-documented and organized.
 
 ![Portfolio Screenshot](path-to-screenshot.png)
 
