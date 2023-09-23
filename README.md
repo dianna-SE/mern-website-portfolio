@@ -24,10 +24,10 @@ Post-course, I deployed the site using AWS Amplify, highlighting my ability to t
 ---
 
 ## Technologies 
-- **MongoDB**:
-- **Express.js**:
-- **React**:
-- **Node.js**:
+- **MongoDB**
+- **Express.js**
+- **React**
+- **Node.js**
 
 ### Setup:
 - **MongoDB Atlas**: This is utilized for data management. A MongoDB Atlas account must be set up. Create a new cluster using Google Cloud and connect to the recommended region to start handling project data.
