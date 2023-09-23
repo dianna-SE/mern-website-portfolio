@@ -1,4 +1,4 @@
-# Portfolio Website
+# Website Portfolio
 
 Welcome to my personal portfolio website, a culmination of dedicated work and learning over the duration of my web development course quarter. This portfolio website is the result of work I did during my web development course. Initially built based on the course guidelines, I later redesigned it and integrated a backend with MongoDB to manage and display projects dynamically.
 
@@ -22,6 +22,12 @@ Post-course, I deployed the site using AWS Amplify, highlighting my ability to t
 - **Error Handling**:  Implements robust error handling mechanisms, ensuring that any inconsistencies or issues with the backend or frontend project data are addressed promptly, and users are provided with informative feedback to enhance their overall experience.
 
 ---
+
+## Technologies 
+- **MongoDB**:
+- **Express.js**:
+- **React**:
+- **Node.js**:
 
 ### Setup:
 - **MongoDB Atlas**: This is utilized for data management. A MongoDB Atlas account must be set up. Create a new cluster using Google Cloud and connect to the recommended region to start handling project data.
