@@ -8,7 +8,7 @@ Post-course, I deployed the site using AWS Amplify, highlighting my ability to t
 
 
 <img width="1328" alt="screenshot" src="https://github.com/dianna-SE/mern-website-portfolio/assets/97206862/6e838d39-173f-4def-81ef-3f9fe2740cb9">
-<img width="1329" alt="Screenshot 2023-09-23 at 2 38 11 AM" src="https://github.com/dianna-SE/mern-website-portfolio/assets/97206862/b80d9a8a-7fa0-4dfc-9a64-63ea9466b13a">
+<img width="1329" alt="Screenshot 2023-09-23 at 2 38 19 AM" src="https://github.com/dianna-SE/mern-website-portfolio/assets/97206862/de8eccef-a955-4063-a9d0-6a59121b7596">
 <img width="1329" alt="Screenshot 2023-09-23 at 2 38 01 AM" src="https://github.com/dianna-SE/mern-website-portfolio/assets/97206862/6d20aebb-1956-46fd-a6f1-f518fa9c35a9">
 
 
