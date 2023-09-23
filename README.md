@@ -27,7 +27,7 @@ Post-course, I deployed the site using AWS Amplify, highlighting my ability to t
 - **MongoDB Atlas**: This is utilized for data management. A MongoDB Atlas account must be set up. Create a new cluster using Google Cloud and connect to the recommended region to start handling project data.
 1. Register for a [MongoDB Atlas account](https://www.mongodb.com/cloud/atlas/register) if you don't have one.
 2. Create a new cluster using Google Cloud.
-3. Ensure you connect to the recommended region to optimally manage project data.
+3. Ensure that you connect to the recommended region to optimally manage project data.
   
 - **Token**: A token is required for authentication. Generate a token and add it to your `.env` file within the backend folder with the variable name.
 
